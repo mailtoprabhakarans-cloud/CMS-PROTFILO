@@ -7,11 +7,16 @@ import {
   ChevronRight,
   Clock3,
   Crown,
+  Images,
   Instagram,
+  Mail,
   MapPin,
+  Maximize2,
   Menu,
   MessageCircle,
   Phone,
+  Search,
+  ShieldCheck,
   Sparkles,
   Star,
   X,
@@ -27,6 +32,7 @@ interface ServiceItem {
   description: string;
   highlights: string[];
   image: string;
+  images: string[];
 }
 
 const servicesData: ServiceItem[] = [
@@ -39,6 +45,11 @@ const servicesData: ServiceItem[] = [
     description: 'Bespoke blouse cuts tailored to sculpt your body perfectly with superior padding, necklines, and back designs.',
     highlights: ['Princess Cut', 'Katori Cut', 'Hi-Neck', 'Back Open', 'Lining & Ordinary Blouse', 'Deep Back Models'],
     image: '/images/service-blouse.jpg',
+    images: [
+      '/images/service-blouse.jpg',
+      '/images/service-blouse-2.jpg',
+      '/images/service-blouse-3.jpg',
+    ],
   },
   {
     id: 'aari-work',
@@ -49,16 +60,26 @@ const servicesData: ServiceItem[] = [
     description: 'Exquisite bridal handwork featuring genuine zari, cut beads, kundans, and silk thread embroidery customized to your saree motif.',
     highlights: ['Bridal Necklines', 'Custom Motif Sleeves', 'Zardozi Embroidery', 'Peacock & Floral Handwork', 'Border Detailing'],
     image: '/images/service-aari.jpg',
+    images: [
+      '/images/service-aari.jpg',
+      '/images/service-aari-2.jpg',
+      '/images/service-aari-3.jpg',
+    ],
   },
   {
     id: 'saree-pleating',
     category: 'saree',
     number: '03',
-    badge: 'Trending & Convenient',
+    badge: '23+ Draping Styles',
     title: 'Saree Pre-Pleating & Draping',
-    description: 'Transform any Kanchipuram, Banarasi, or party saree into a ready-to-wear 60-second drape with immaculate iron-set pleats.',
-    highlights: ['Ready-to-Wear Box Fold', 'Neat Shoulder Pleats', 'Waist Pleat Anchoring', 'Safe Fabric Pressing', 'Bridal Saree Ready'],
-    image: '/images/service-saree.jpg',
+    description: 'Master studio for 23+ pre-pleating & couture draping styles. Turn any Kanchipuram silk, net, or georgette into an effortless 60-second ready drape.',
+    highlights: ['23+ Draping Styles', 'Box & Hanger Folding', 'Madisar & Kerala Draping', 'Mermaid & Cancan Draping', 'Two Saree & Net Draping', 'Heatless & Straightener Set'],
+    image: '/images/service-saree-box1.jpg',
+    images: [
+      '/images/service-saree-box1.jpg',
+      '/images/service-saree-box2.jpg',
+      '/images/service-saree-box3.jpg',
+    ],
   },
   {
     id: 'tops-kurtis',
@@ -69,6 +90,11 @@ const servicesData: ServiceItem[] = [
     description: 'Flattering silhouettes designed with thoughtful necklines, sleeves, and tailored panels for work, festivals, and celebrations.',
     highlights: ['Anarkali Silhouette', 'Panel Cut Tops', 'Collar Neck Kurtis', 'Back Zip Models', 'Shirt Kurti Models', 'Lining Tops'],
     image: '/images/service-tops.jpg',
+    images: [
+      '/images/service-tops.jpg',
+      '/images/service-tops-2.jpg',
+      '/images/service-tops-3.jpg',
+    ],
   },
   {
     id: 'pants-bottoms',
@@ -79,6 +105,11 @@ const servicesData: ServiceItem[] = [
     description: 'Comfortable, high-finish bottoms cut to move effortlessly with you, pairing seamlessly with any kurti or tunic.',
     highlights: ['Semi Patiala', 'Full Patiala', 'Crush Pants', 'Straight Cut Trouser', 'Palazzo Pants', 'Comfort Pyjama'],
     image: '/images/service-pants.jpg',
+    images: [
+      '/images/service-pants.jpg',
+      '/images/test-pants1.jpg',
+      '/images/test-pants2.jpg',
+    ],
   },
   {
     id: 'kids-wear',
@@ -86,9 +117,14 @@ const servicesData: ServiceItem[] = [
     number: '06',
     badge: 'Cute & Gentle On Skin',
     title: 'Custom Kidswear & Pattu Pavadai',
-    description: 'Adorable traditional and modern outfits made with child-safe soft linings and breathable luxury fabrics.',
-    highlights: ['Pattu Top & Skirt', 'Circular Skirt', 'Designer Frocks', 'Pinafore Skirts', 'Zapla Newborn Wear'],
-    image: '/images/service-kids.jpg',
+    description: 'Handcrafted traditional pattu pavadai sets, peplum lehengas, and festival wear tailored with child-safe soft linings and custom embroidery.',
+    highlights: ['Elephant Motif Pattu Pavadai', 'Peplum & Floral Lehenga', 'Pattu Top & Skirt', 'Designer Frocks', 'Matching Tassels & Latkans', 'Child-Safe Soft Lining'],
+    image: '/images/service-kids-1.png',
+    images: [
+      '/images/service-kids-1.png',
+      '/images/service-kids-2.png',
+      '/images/service-kids.jpg',
+    ],
   },
   {
     id: 'designing-concepts',
@@ -96,9 +132,14 @@ const servicesData: ServiceItem[] = [
     number: '07',
     badge: 'Couture Styling',
     title: 'Sleeve & Neck Designing Concepts',
-    description: 'Creative pattern making for puff sleeves, elbow-cutout designs, sweetheart necklines, and modern sheer panels.',
-    highlights: ['Puff & Bell Sleeves', 'Keyhole & Boat Necks', 'Cutwork Styling', 'Sheer Net Insets', 'Border Piping'],
-    image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80',
+    description: 'Creative pattern making for cowl drape sleeves, ruched puff sleeves, potli button cuffs, cutout patterns, and bespoke necklines.',
+    highlights: ['Cowl Draped Sleeves', 'Potli Button Cuffs', 'Ruched Puff Sleeves', 'Slit & Cutout Sleeves', 'Pearl Neckline Detailing', 'Roll-up Tab Sleeves'],
+    image: '/images/service-concept-1.png',
+    images: [
+      '/images/service-concept-1.png',
+      '/images/service-concept-2.png',
+      '/images/service-concept-3.png',
+    ],
   },
   {
     id: 'sudithar-stitching',
@@ -106,9 +147,14 @@ const servicesData: ServiceItem[] = [
     number: '08',
     badge: 'Precision Fit',
     title: 'Sudithar Stitching & Finishing',
-    description: 'All styles of Sudithar and Salwar stitching with clean overlock finishes, neat seams, and long-lasting durability.',
-    highlights: ['All Sudithar Models', 'Overlock Seams', 'Custom Slit Lengths', 'Lining Reinforcement', 'Comfort Sizing'],
-    image: 'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80',
+    description: 'All styles of Sudithar and Salwar stitching with designer neck patterns, custom patchwork collars, neat overlock seams, and comfortable fit.',
+    highlights: ['18+ Custom Neck Models', 'Asymmetric Wrap Collars', 'Pintuck & Potli Buttons', 'Triangle Border Notches', 'Overlock Seams & Slits', 'Lining Reinforcement'],
+    image: '/images/service-sudithar-1.png',
+    images: [
+      '/images/service-sudithar-1.png',
+      '/images/service-sudithar-2.png',
+      '/images/service-sudithar-3.png',
+    ],
   },
   {
     id: 'general-alterations',
@@ -116,9 +162,243 @@ const servicesData: ServiceItem[] = [
     number: '09',
     badge: 'Essential Studio Service',
     title: 'In-Skirt, Nighty & Alterations',
-    description: 'Professional alteration services to breathe new life into your cherished outfits, plus bespoke tailored essentials.',
-    highlights: ['4/6 Part In-Skirt', 'Bespoke Nighty', 'Size Adjustments', 'Blouse Alterations', 'Saree Fall & Pico'],
-    image: '/images/service-alterations.jpg',
+    description: 'Professional alteration services to breathe new life into your cherished outfits, plus bespoke tailored in-skirts, nighties, and garment remodeling.',
+    highlights: ['Before & After Remodeling', 'Custom Pockets & Waist Fit', '4/6 Part In-Skirt', 'Bespoke Nighty', 'Blouse Alterations', 'Saree Fall & Pico'],
+    image: '/images/service-alterations-1.png',
+    images: [
+      '/images/service-alterations-1.png',
+      '/images/service-alterations-2.png',
+      '/images/service-alterations.jpg',
+    ],
+  },
+];
+
+export interface SareeDrapingStyle {
+  no: string;
+  id: string;
+  name: string;
+  category: 'bridal' | 'heritage' | 'modern' | 'care' | 'fusion';
+  badge: string;
+  tag: string;
+  description: string;
+}
+
+export const drapingCategories = [
+  { id: 'all', label: 'All Styles', count: 23 },
+  { id: 'bridal', label: 'Bridal & Grandeur', count: 4 },
+  { id: 'heritage', label: 'Heritage & Regional', count: 6 },
+  { id: 'modern', label: 'Modern & Silhouette', count: 6 },
+  { id: 'care', label: 'Folding & Fabric Care', count: 5 },
+  { id: 'fusion', label: 'Fusion & Half Saree', count: 2 },
+];
+
+export const sareeDrapingStyles: SareeDrapingStyle[] = [
+  {
+    no: '01',
+    id: 'saree-draping',
+    name: 'Saree Draping',
+    category: 'modern',
+    badge: 'Signature Standard',
+    tag: 'Classic Elegance',
+    description: 'Bespoke full-length classical saree draping tailored to your exact height, posture, and pallu length for effortless grace.',
+  },
+  {
+    no: '02',
+    id: 'draping-side-pleat',
+    name: 'Draping Side Pleat',
+    category: 'modern',
+    badge: 'Modern Silhouette',
+    tag: 'Slender Contoured Fit',
+    description: 'Sculpted knife-edge side pleating contouring around the waist and hip curve to deliver an elongated, slimming hourglass drape.',
+  },
+  {
+    no: '03',
+    id: 'one-pleat-draping',
+    name: 'One Pleat Draping',
+    category: 'modern',
+    badge: 'Chic Minimalist',
+    tag: 'Single Flowing Pallu',
+    description: 'Crisply pinned single-pleat open pallu draped across the torso with discreet anchoring for an effortless, royal modern presence.',
+  },
+  {
+    no: '04',
+    id: 'ironing-pre-pleating-tips',
+    name: 'Ironing and Pre Pleating Tips etc.',
+    category: 'care',
+    badge: 'Fabric Care Masterclass',
+    tag: 'Temperature-Safe Setting',
+    description: 'Professional steam and temperature regulation, anti-wrinkle crease maintenance, and storage practices to safeguard pure silk and zari.',
+  },
+  {
+    no: '05',
+    id: 'mermaid-draping',
+    name: 'Mermaid Draping',
+    category: 'bridal',
+    badge: 'Couture Silhouette',
+    tag: 'Sculpted Fishtail Flare',
+    description: 'Dramatic fishtail styling hugging snugly through the hips and knees, sweeping outward into a flared mermaid train for evening receptions.',
+  },
+  {
+    no: '06',
+    id: 'puffy-pleated-draping',
+    name: 'Puffy Pleated Draping',
+    category: 'bridal',
+    badge: 'Royal Grandeur',
+    tag: 'Elevated 3D Volume',
+    description: 'Architecturally puffed and elevated shoulder and waist pleats designed to give regal 3D volume and dimensional richness to wedding silks.',
+  },
+  {
+    no: '07',
+    id: 'cancan-draping',
+    name: 'Cancan Draping',
+    category: 'bridal',
+    badge: 'Bridal Ballgown Flare',
+    tag: 'Full Circular Volume',
+    description: 'Structured under-saree cancan support layering that transforms traditional South silk and Banarasi sarees into majestic flared ballgowns.',
+  },
+  {
+    no: '08',
+    id: 'draping-with-two-saree',
+    name: 'Draping with Two Sarees',
+    category: 'bridal',
+    badge: 'Bridal Dual Fusion',
+    tag: 'Dual Saree Grandeur',
+    description: 'Exquisite fusion draping uniting two complementary sarees into a multi-layered royal masterpiece with double contrasting pallus.',
+  },
+  {
+    no: '09',
+    id: 'net-saree-draping',
+    name: 'Net Saree Draping',
+    category: 'modern',
+    badge: 'Delicate Sheer Specialist',
+    tag: 'Non-Slip Grip Anchoring',
+    description: 'Anti-tear, slip-resistant anchoring crafted specially for delicate net, tissue, organza, and sheer embellished sarees without pin-holes.',
+  },
+  {
+    no: '10',
+    id: 'madisar-draping',
+    name: 'Madisar Draping',
+    category: 'heritage',
+    badge: 'Tamil Brahmin Heritage',
+    tag: 'Authentic 9-Yard (9 Gaja)',
+    description: 'Mastery in both Iyer and Iyengar 9-yard Madisar draping, ensuring authentic ritual conformity, maximum comfort, and walking ease.',
+  },
+  {
+    no: '11',
+    id: 'kerala-saree-draping',
+    name: 'Kerala Saree Draping',
+    category: 'heritage',
+    badge: 'God’s Own Country',
+    tag: 'Kasavu Golden Border',
+    description: 'Traditional Kasavu drape featuring precise pleating that honors the pure cream cotton and gleaming gold borders for temple and Onam events.',
+  },
+  {
+    no: '12',
+    id: 'set-mundu-draping',
+    name: 'Set Mundu Draping',
+    category: 'heritage',
+    badge: 'Kerala Traditional',
+    tag: 'Mundum Neriyathum',
+    description: 'Classic two-piece Kerala Mundum Neriyathum draping with crisp chest pleats and symmetrical golden border alignment.',
+  },
+  {
+    no: '13',
+    id: 'north-indian-style-draping',
+    name: 'North Indian Style Draping',
+    category: 'heritage',
+    badge: 'Festive Classic',
+    tag: 'Front Seedha Pallu',
+    description: 'Royal Seedha Pallu drape sweeping from back to front over the right shoulder, highlighting ornate front chest borders and heavy zari work.',
+  },
+  {
+    no: '14',
+    id: 'rajasthani-style-draping',
+    name: 'Rajasthani Style Draping',
+    category: 'heritage',
+    badge: 'Royal Marwari Heritage',
+    tag: 'Ghoonghat & Bandhani',
+    description: 'Iconic royal Rajasthani draping with sweeping chest pleats, vibrant Bandhej tucks, and regal ghoonghat alignment.',
+  },
+  {
+    no: '15',
+    id: 'back-kosuvam-draping',
+    name: 'Back Kosuvam Draping',
+    category: 'heritage',
+    badge: 'Chettinad Heritage',
+    tag: 'Tamil Back-Pleated Kosuvam',
+    description: 'Traditional Tamil heritage back-pleating technique evoking vintage Chettinad nobility with balanced, non-shifting pleats.',
+  },
+  {
+    no: '18',
+    id: 'half-chest-covered-draping',
+    name: 'Half Chest Covered Draping',
+    category: 'modern',
+    badge: 'Graceful & Modest',
+    tag: 'Sophisticated Diagonal',
+    description: 'Carefully measured diagonal pallu drape offering graceful modest chest coverage while highlighting temple necklace jewelry.',
+  },
+  {
+    no: '19',
+    id: 'georgette-saree-draping',
+    name: 'Georgette Saree Draping',
+    category: 'modern',
+    badge: 'Soft & Flowy',
+    tag: 'Fluid Feather Fall',
+    description: 'Special micro-pinning and crease-free tucking engineered to tame slippery, lightweight georgette and crepe fabrics seamlessly.',
+  },
+  {
+    no: '20',
+    id: 'heatless-draping',
+    name: 'Heatless Draping',
+    category: 'care',
+    badge: 'Zero-Heat Silk Safe',
+    tag: 'Zari & Antique Silk Safe',
+    description: 'Proprietary manual finger-pressing and compression folding with zero heat application, protecting fragile gold threads from damage.',
+  },
+  {
+    no: '21',
+    id: 'box-folding',
+    name: 'Box Folding',
+    category: 'care',
+    badge: 'Express Ready-to-Wear',
+    tag: 'Wear in Under 60 Seconds',
+    description: 'Complete pre-pleated, anchored, and steam-locked saree neatly packed in an elegant presentation box, ready to slip on in 60 seconds.',
+  },
+  {
+    no: '22',
+    id: 'hanger-folding',
+    name: 'Hanger Folding',
+    category: 'care',
+    badge: 'Wardrobe Crease-Free',
+    tag: 'Bridal Suite Ready',
+    description: 'Pre-pleated and suspended on custom wooden hangers, keeping pallu and waist pleats razor-sharp and wrinkle-free for your wedding morning.',
+  },
+  {
+    no: '23',
+    id: 'straightener-draping',
+    name: 'Straightener Draping',
+    category: 'care',
+    badge: 'Razor-Sharp Pleating',
+    tag: 'Ceramic Precision Heat Lock',
+    description: 'High-precision ceramic styling press technique creating crisp, razor-sharp, uniform pleats that remain locked all day without creasing.',
+  },
+  {
+    no: '24',
+    id: 'lehenga-draping',
+    name: 'Lehenga Draping',
+    category: 'fusion',
+    badge: 'Saree-to-Lehenga',
+    tag: 'Sangeet & Party Flare',
+    description: 'Ingenious draping method converting your 6-yard saree into a flared lehenga-style skirt with a dramatic pleated or floating dupatta.',
+  },
+  {
+    no: '25',
+    id: 'davani-draping',
+    name: 'Davani Draping',
+    category: 'fusion',
+    badge: 'South Half Saree',
+    tag: 'Langa Voni Traditional',
+    description: 'Youthful South Indian Half-Saree (Pavadai Davani) drape with pleated cross-body pallu, hip gathers, and neat safety anchoring.',
   },
 ];
 
@@ -248,11 +528,193 @@ const testimonials = [
 
 const WHATSAPP_PHONE = '919976963056';
 const WHATSAPP_BASE = `https://wa.me/${WHATSAPP_PHONE}`;
+const STUDIO_EMAIL = 'cmsfashiondesigner@gmail.com';
+
+interface ServiceCardProps {
+  service: ServiceItem;
+  onOpenLightbox: (service: ServiceItem, index: number) => void;
+  whatsAppLink: string;
+}
+
+function ServiceCard({ service, onOpenLightbox, whatsAppLink }: ServiceCardProps) {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const images = service.images && service.images.length > 0 ? service.images : [service.image];
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActiveIdx((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActiveIdx((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <article className="service-card">
+      <div className="service-card-top">
+        <div
+          className="service-card-img-wrap"
+          onClick={() => onOpenLightbox(service, activeIdx)}
+          role="button"
+          tabIndex={0}
+          title="Click to view full photo"
+        >
+          <img
+            src={images[activeIdx]}
+            alt={`${service.title} - Sample ${activeIdx + 1}`}
+            className="service-card-img"
+            loading="lazy"
+          />
+
+          {images.length > 1 && (
+            <>
+              <button
+                type="button"
+                className="service-img-nav-btn prev"
+                onClick={handlePrev}
+                aria-label="Previous Photo"
+              >
+                <ChevronLeft size={16} />
+              </button>
+              <button
+                type="button"
+                className="service-img-nav-btn next"
+                onClick={handleNext}
+                aria-label="Next Photo"
+              >
+                <ChevronRight size={16} />
+              </button>
+              <div className="service-photo-counter">
+                <Images size={12} />
+                <span>
+                  {activeIdx + 1}/{images.length}
+                </span>
+              </div>
+            </>
+          )}
+
+          <button
+            type="button"
+            className="service-zoom-btn"
+            onClick={(e) => {
+              e.stopPropagation();
+              onOpenLightbox(service, activeIdx);
+            }}
+            aria-label="View Fullscreen"
+          >
+            <Maximize2 size={13} />
+          </button>
+        </div>
+
+        {/* Thumbnail Selector Strip */}
+        {images.length > 1 && (
+          <div className="service-thumb-strip" aria-label="Photo Thumbnails">
+            {images.map((img, idx) => (
+              <button
+                key={idx}
+                type="button"
+                className={`service-thumb-item ${idx === activeIdx ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveIdx(idx);
+                }}
+                aria-label={`View photo ${idx + 1}`}
+              >
+                <img src={img} alt={`${service.title} thumbnail ${idx + 1}`} />
+                <span className="thumb-index-dot">{idx + 1}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="service-badge-row">
+          <span className="service-badge">{service.badge}</span>
+          <span className="service-num">{service.number}</span>
+        </div>
+        <h3 className="service-title">{service.title}</h3>
+        <p className="service-desc">{service.description}</p>
+        <div className="service-highlights">
+          {service.highlights.map((item) => (
+            <span className="highlight-pill" key={item}>
+              {item}
+            </span>
+          ))}
+        </div>
+        {service.id === 'saree-pleating' && (
+          <a href="#saree-styles" className="service-saree-action-pill">
+            <Sparkles size={13} />
+            <span>Explore All 23 Draping Styles</span>
+            <ArrowRight size={13} />
+          </a>
+        )}
+      </div>
+
+      <div className="service-footer">
+        <a
+          href={whatsAppLink}
+          target="_blank"
+          rel="noreferrer"
+          className="service-cta-link"
+        >
+          <span>Inquire On WhatsApp</span>
+          <ArrowUpRight size={15} />
+        </a>
+      </div>
+    </article>
+  );
+}
+
+const heroShowcaseImages = [
+  {
+    src: '/images/service-blouse-2.jpg',
+    alt: 'Bespoke Emerald Green Sweetheart Bridal Blouse in Atelier',
+  },
+  {
+    src: '/images/service-aari.jpg',
+    alt: 'Haute Bridal Aari & Zardozi Hand Embroidery',
+  },
+  {
+    src: '/images/service-blouse-3.jpg',
+    alt: 'Crimson Red Deep-Back Bridal Blouse with Royal Tassels',
+  },
+];
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [selectedBlouseStyle, setSelectedBlouseStyle] = useState<BlouseStyle>(blouseStyles[0]);
+  const [heroImgIdx, setHeroImgIdx] = useState(0);
+  const [lightboxData, setLightboxData] = useState<{
+    service: ServiceItem;
+    index: number;
+  } | null>(null);
+
+  const handleOpenLightbox = (service: ServiceItem, index: number) => {
+    setLightboxData({ service, index });
+  };
+
+  const handleCloseLightbox = () => {
+    setLightboxData(null);
+  };
+
+  const handleLightboxPrev = () => {
+    if (!lightboxData) return;
+    const count = lightboxData.service.images.length;
+    setLightboxData({
+      service: lightboxData.service,
+      index: (lightboxData.index - 1 + count) % count,
+    });
+  };
+
+  const handleLightboxNext = () => {
+    if (!lightboxData) return;
+    const count = lightboxData.service.images.length;
+    setLightboxData({
+      service: lightboxData.service,
+      index: (lightboxData.index + 1) % count,
+    });
+  };
 
   const currentBlouseIndex = blouseStyles.findIndex((s) => s.id === selectedBlouseStyle.id);
 
@@ -280,6 +742,15 @@ export default function App() {
 
   const handleWizardSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const namePart = clientName.trim() ? `Client Name: ${clientName.trim()}\n` : '';
+    const datePart = occasionDate.trim() ? `Approximate Event Date: ${occasionDate.trim()}\n` : '';
+    const subject = `Consultation Inquiry: ${wizardService} ${clientName.trim() ? `- ${clientName.trim()}` : ''}`;
+    const body = `Hello CMS Fashion Designer Team,\n\nI would like to book a consultation for:\n\n• Service: ${wizardService}\n• Turnaround Urgency: ${wizardUrgency}\n${namePart ? `• ${namePart}` : ''}${datePart ? `• ${datePart}` : ''}\nPlease share consultation availability, design catalogs, and pricing details.\n\nThank you!`;
+
+    window.location.href = `mailto:${STUDIO_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const handleWhatsAppSubmit = () => {
     const namePart = clientName.trim() ? `My name is ${clientName.trim()}. ` : '';
     const datePart = occasionDate.trim() ? `for my upcoming event around ${occasionDate}. ` : '';
     const message = `Hello CMS Fashion Designer! ${namePart}I would like to book a consultation for ${wizardService} with ${wizardUrgency} timeline ${datePart}Could you please share appointment details and design options?`;
@@ -296,13 +767,34 @@ export default function App() {
     return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
   };
 
+  // Saree Draping & Pre-Pleating Styles Filter & Search
+  const [drapingFilter, setDrapingFilter] = useState<string>('all');
+  const [drapingSearch, setDrapingSearch] = useState<string>('');
+
+  const filteredDrapingStyles = sareeDrapingStyles.filter((style) => {
+    const matchesCategory = drapingFilter === 'all' || style.category === drapingFilter;
+    const query = drapingSearch.trim().toLowerCase();
+    const matchesSearch = !query ||
+      style.name.toLowerCase().includes(query) ||
+      style.tag.toLowerCase().includes(query) ||
+      style.badge.toLowerCase().includes(query) ||
+      style.description.toLowerCase().includes(query) ||
+      style.no.includes(query);
+    return matchesCategory && matchesSearch;
+  });
+
+  const createDrapingWhatsAppLink = (styleName: string, styleNo: string) => {
+    const text = `Hello CMS Fashion Designer, I would like to book the "${styleName}" (#${styleNo}) saree pre-pleating / draping service. Could you please share appointment availability and pricing?`;
+    return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+  };
+
   return (
     <div className="site-shell">
       {/* Top Announcement Ribbon */}
       <div className="top-announcement">
         <Sparkles size={14} color="#f5df97" />
         <span>Coimbatore's Premier Bespoke & Bridal Atelier</span>
-        · Est. 2016 · Peelamedu Hope College ·
+        · Est. 2022 · Peelamedu Hope College ·
         <a
           href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I would like to book a bridal consultation.')}`}
           target="_blank"
@@ -331,6 +823,7 @@ export default function App() {
               <a href="#studio" className="nav-link">The Studio</a>
               <a href="#blouses" className="nav-link">Blouse Styles</a>
               <a href="#services" className="nav-link">Services</a>
+              <a href="#saree-styles" className="nav-link">Saree Draping</a>
               <a href="#craftsmanship" className="nav-link">Craftsmanship</a>
               <a href="#portfolio" className="nav-link">Lookbook</a>
               <a href="#testimonials" className="nav-link">Reviews</a>
@@ -376,20 +869,24 @@ export default function App() {
                 <span className="mobile-nav-num">03</span>
                 <span>All Tailoring Services</span>
               </a>
-              <a href="#craftsmanship" onClick={closeMenu} className="mobile-nav-item">
+              <a href="#saree-styles" onClick={closeMenu} className="mobile-nav-item">
                 <span className="mobile-nav-num">04</span>
+                <span>Saree Draping (23 Styles)</span>
+              </a>
+              <a href="#craftsmanship" onClick={closeMenu} className="mobile-nav-item">
+                <span className="mobile-nav-num">05</span>
                 <span>The CMS Craftsmanship</span>
               </a>
               <a href="#portfolio" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">05</span>
+                <span className="mobile-nav-num">06</span>
                 <span>Selected Lookbook</span>
               </a>
               <a href="#testimonials" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">06</span>
+                <span className="mobile-nav-num">07</span>
                 <span>Client Reviews</span>
               </a>
               <a href="#contact" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">07</span>
+                <span className="mobile-nav-num">08</span>
                 <span>Studio Location & Contact</span>
               </a>
             </div>
@@ -416,7 +913,7 @@ export default function App() {
                 <span>Call Studio (+91 99769 63056)</span>
               </a>
               <p className="mobile-drawer-timing">
-                Mon – Sat: 10:00 AM – 7:00 PM · Hope College, Peelamedu
+                Mon – Sun: 7:00 AM – 10:00 PM (All 7 Days Open) · Hope College, Peelamedu
               </p>
             </div>
           </div>
@@ -431,7 +928,7 @@ export default function App() {
               <div className="hero-content">
                 <div className="hero-badge">
                   <Crown size={15} />
-                  <span>Est. 2016 · Coimbatore's Haute Couture Atelier</span>
+                  <span>Est. 2022 · Coimbatore's Haute Couture Atelier</span>
                 </div>
 
                 <h1 className="hero-title">
@@ -465,7 +962,7 @@ export default function App() {
                     <span className="stat-label">Years of Mastery</span>
                   </div>
                   <div className="stat-item">
-                    <span className="stat-number">5,000+</span>
+                    <span className="stat-number">3,000+</span>
                     <span className="stat-label">Bespoke Fits</span>
                   </div>
                   <div className="stat-item">
@@ -497,10 +994,21 @@ export default function App() {
                 <div className="hero-frame">
                   <div className="hero-frame-inner">
                     <img
-                      src="/cms-logo.jpg"
-                      alt="CMS Fashion Designer Official Gold Logo"
+                      src={heroShowcaseImages[heroImgIdx].src}
+                      alt={heroShowcaseImages[heroImgIdx].alt}
                       loading="eager"
                     />
+                    <div className="hero-img-dots" role="tablist" aria-label="Hero Bridal Highlights">
+                      {heroShowcaseImages.map((_, i) => (
+                        <button
+                          key={i}
+                          type="button"
+                          className={`hero-dot ${i === heroImgIdx ? 'active' : ''}`}
+                          onClick={() => setHeroImgIdx(i)}
+                          aria-label={`View bridal showcase ${i + 1}`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
 
@@ -737,7 +1245,7 @@ export default function App() {
                 className={`filter-btn ${activeCategory === 'saree' ? 'active' : ''}`}
                 onClick={() => setActiveCategory('saree')}
               >
-                Saree Pleating
+                Saree Pre-Pleating
               </button>
               <button
                 type="button"
@@ -772,43 +1280,12 @@ export default function App() {
             {/* Services Cards Grid */}
             <div className="services-grid">
               {filteredServices.map((service) => (
-                <article className="service-card" key={service.id}>
-                  <div className="service-card-top">
-                    <div className="service-card-img-wrap">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="service-card-img"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="service-badge-row">
-                      <span className="service-badge">{service.badge}</span>
-                      <span className="service-num">{service.number}</span>
-                    </div>
-                    <h3 className="service-title">{service.title}</h3>
-                    <p className="service-desc">{service.description}</p>
-                    <div className="service-highlights">
-                      {service.highlights.map((item) => (
-                        <span className="highlight-pill" key={item}>
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="service-footer">
-                    <a
-                      href={createWhatsAppServiceLink(service.title)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="service-cta-link"
-                    >
-                      <span>Inquire On WhatsApp</span>
-                      <ArrowUpRight size={15} />
-                    </a>
-                  </div>
-                </article>
+                <ServiceCard
+                  key={service.id}
+                  service={service}
+                  onOpenLightbox={handleOpenLightbox}
+                  whatsAppLink={createWhatsAppServiceLink(service.title)}
+                />
               ))}
             </div>
 
@@ -867,6 +1344,150 @@ export default function App() {
                       />
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Saree Pre-Pleating & Draping Styles Showcase Section */}
+        <section id="saree-styles" className="saree-styles-section section-pad">
+          <div className="container-max">
+            <div className="section-header-center">
+              <div className="section-eyebrow">
+                <span /> 03.B / Master Saree Studio <span />
+              </div>
+              <h2 className="section-title">
+                23+ Specialized Saree <br />
+                <em>Pre-Pleating & Draping Styles.</em>
+              </h2>
+              <p className="section-desc">
+                From heritage Tamil Madisar and Kerala Kasavu to modern Mermaid, Cancan, Double Saree, and 60-Second Box Folding—our Coimbatore master drapists bring you wrinkle-free, runway-ready perfection.
+              </p>
+            </div>
+
+            {/* Controls: Category Filter Tabs & Live Search */}
+            <div className="saree-controls-wrap">
+              <div className="saree-filter-tabs">
+                {drapingCategories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    className={`draping-tab-btn ${drapingFilter === cat.id ? 'active' : ''}`}
+                    onClick={() => setDrapingFilter(cat.id)}
+                  >
+                    <span>{cat.label}</span>
+                    <span className="tab-count">{cat.count}</span>
+                  </button>
+                ))}
+              </div>
+
+              <div className="saree-search-box">
+                <Search size={16} className="saree-search-icon" />
+                <input
+                  type="text"
+                  className="saree-search-input"
+                  placeholder="Search draping styles (e.g. Madisar, Mermaid, Box fold, Heatless)..."
+                  value={drapingSearch}
+                  onChange={(e) => setDrapingSearch(e.target.value)}
+                />
+                {drapingSearch && (
+                  <button
+                    type="button"
+                    className="saree-search-clear"
+                    onClick={() => setDrapingSearch('')}
+                    aria-label="Clear Search"
+                  >
+                    <X size={14} />
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Results Count Bar */}
+            <div className="saree-count-bar">
+              <span>
+                Showing <strong>{filteredDrapingStyles.length}</strong> of 23 Specialist Draping Services
+              </span>
+              {drapingSearch && (
+                <span className="saree-search-indicator">
+                  Filtered by: <em>"{drapingSearch}"</em>
+                </span>
+              )}
+            </div>
+
+            {/* 23 Draping Styles Grid */}
+            <div className="saree-styles-grid">
+              {filteredDrapingStyles.map((item) => (
+                <div className="saree-style-card" key={item.id}>
+                  <div className="saree-card-top">
+                    <span className="saree-card-no">#{item.no}</span>
+                    <span className="saree-card-badge">{item.badge}</span>
+                  </div>
+
+                  <h3 className="saree-card-title">{item.name}</h3>
+
+                  <div className="saree-card-tag">
+                    <Sparkles size={12} />
+                    <span>{item.tag}</span>
+                  </div>
+
+                  <p className="saree-card-desc">{item.description}</p>
+
+                  <div className="saree-card-footer">
+                    <a
+                      href={createDrapingWhatsAppLink(item.name, item.no)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="saree-card-btn"
+                    >
+                      <MessageCircle size={14} />
+                      <span>Book #{item.no} on WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Atelier Quality Assurance Ribbon */}
+            <div className="saree-perks-strip">
+              <div className="saree-perk-item">
+                <div className="saree-perk-icon-wrap">
+                  <Zap size={22} />
+                </div>
+                <div>
+                  <h4>60-Second Wear</h4>
+                  <p>Pre-pleated, anchored & boxed—slip into your saree in under a minute on busy event mornings.</p>
+                </div>
+              </div>
+
+              <div className="saree-perk-item">
+                <div className="saree-perk-icon-wrap">
+                  <ShieldCheck size={22} />
+                </div>
+                <div>
+                  <h4>Zari & Fabric Safe</h4>
+                  <p>Specialized steam-set or 100% heatless finger-pleating to protect pure gold zari threads.</p>
+                </div>
+              </div>
+
+              <div className="saree-perk-item">
+                <div className="saree-perk-icon-wrap">
+                  <Clock3 size={22} />
+                </div>
+                <div>
+                  <h4>Express Turnaround</h4>
+                  <p>Same-day and 24-hour express pre-pleating options available for urgent celebrations.</p>
+                </div>
+              </div>
+
+              <div className="saree-perk-item">
+                <div className="saree-perk-icon-wrap">
+                  <Crown size={22} />
+                </div>
+                <div>
+                  <h4>Bridal Studio Assistance</h4>
+                  <p>In-studio professional draping sessions for brides, mothers, and bridesmaids in Coimbatore.</p>
                 </div>
               </div>
             </div>
@@ -1053,13 +1674,27 @@ export default function App() {
 
                   <div className="contact-info-entry">
                     <div className="contact-info-icon">
+                      <Mail size={22} />
+                    </div>
+                    <div className="contact-info-text">
+                      <h5>Official Email</h5>
+                      <p>
+                        <a href={`mailto:${STUDIO_EMAIL}`} style={{ color: 'var(--gold-bright)' }}>
+                          {STUDIO_EMAIL}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="contact-info-entry">
+                    <div className="contact-info-icon">
                       <Clock3 size={22} />
                     </div>
                     <div className="contact-info-text">
                       <h5>Studio Timings</h5>
                       <p>
-                        Monday – Saturday: 10:00 AM – 7:00 PM<br />
-                        Sunday: By Prior Appointment
+                        Monday – Sunday: 7:00 AM – 10:00 PM<br />
+                        <span style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>Open All 7 Days (Sunday Working Day)</span>
                       </p>
                     </div>
                   </div>
@@ -1072,7 +1707,7 @@ export default function App() {
                   Book Consultation
                 </h3>
                 <p className="consultation-desc">
-                  Select your service, preferred turnaround time, and event date to generate your personalized WhatsApp consultation message.
+                  Select your service, preferred turnaround time, and event date to send your consultation inquiry directly to <strong style={{ color: 'var(--gold-bright)' }}>{STUDIO_EMAIL}</strong> or via WhatsApp.
                 </p>
 
                 <form onSubmit={handleWizardSubmit}>
@@ -1098,7 +1733,7 @@ export default function App() {
                     >
                       <option value="Bridal Blouse & Aari Work">Bridal Blouse & Aari Handwork</option>
                       <option value="Princess Cut / Designer Blouse">Designer Blouse (Princess/Katori/Hi-Neck)</option>
-                      <option value="Saree Pre-Pleating & Draping">Saree Pre-Pleating (Ready-to-Wear)</option>
+                      <option value="Saree Pre-Pleating & Draping (23+ Styles)">Saree Pre-Pleating (23+ Styles: Box Fold, Madisar, Mermaid, etc.)</option>
                       <option value="Tops & Kurtis (Anarkali/Collar)">Tops & Kurtis (Anarkali / Panel Cut)</option>
                       <option value="Pants & Palazzos">Pants & Bottoms (Patiala / Palazzo)</option>
                       <option value="Custom Kidswear (Pattu Pavadai/Frock)">Kids Wear (Pattu Pavadai / Frocks)</option>
@@ -1134,11 +1769,21 @@ export default function App() {
 
                   <button
                     type="submit"
-                    className="btn btn-whatsapp"
-                    style={{ width: '100%', marginTop: '0.85rem', padding: '1rem 1.6rem' }}
+                    className="btn btn-gold"
+                    style={{ width: '100%', marginTop: '0.95rem', padding: '1rem 1.6rem', justifyContent: 'center' }}
                   >
-                    <MessageCircle size={20} />
-                    <span>Send Consultation Inquiry</span>
+                    <Mail size={19} />
+                    <span>Send Email Inquiry ({STUDIO_EMAIL})</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleWhatsAppSubmit}
+                    className="btn btn-whatsapp"
+                    style={{ width: '100%', marginTop: '0.65rem', padding: '0.85rem 1.6rem', justifyContent: 'center' }}
+                  >
+                    <MessageCircle size={18} />
+                    <span>Or Send via WhatsApp</span>
                   </button>
                 </form>
               </div>
@@ -1163,13 +1808,20 @@ export default function App() {
 
             <div className="footer-social-links">
               <a
+                href={`mailto:${STUDIO_EMAIL}`}
+                className="footer-social-link"
+                style={{ color: 'var(--gold-bright)' }}
+              >
+                <Mail size={18} /> {STUDIO_EMAIL}
+              </a>
+              <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
                 className="footer-social-link"
-                style={{ color: 'var(--gold-bright)' }}
+                style={{ color: 'var(--gold-light)' }}
               >
-                <Instagram size={18} /> Follow on Instagram
+                <Instagram size={18} /> Instagram
               </a>
               <a
                 href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer!')}`}
@@ -1203,6 +1855,104 @@ export default function App() {
         <span className="floating-whatsapp-pulse" />
         <MessageCircle size={32} />
       </a>
+
+      {/* Service Photo Lightbox Modal */}
+      {lightboxData && (
+        <div
+          className="lightbox-overlay"
+          onClick={handleCloseLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Service Photo Gallery"
+        >
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="lightbox-close-btn"
+              onClick={handleCloseLightbox}
+              aria-label="Close photo preview"
+            >
+              <X size={20} />
+            </button>
+
+            <div className="lightbox-stage">
+              {lightboxData.service.images.length > 1 && (
+                <button
+                  type="button"
+                  className="lightbox-nav-btn prev"
+                  onClick={handleLightboxPrev}
+                  aria-label="Previous Photo"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+              )}
+
+              <div className="lightbox-image-holder">
+                <img
+                  src={lightboxData.service.images[lightboxData.index]}
+                  alt={`${lightboxData.service.title} Photo ${lightboxData.index + 1}`}
+                  className="lightbox-img"
+                />
+              </div>
+
+              {lightboxData.service.images.length > 1 && (
+                <button
+                  type="button"
+                  className="lightbox-nav-btn next"
+                  onClick={handleLightboxNext}
+                  aria-label="Next Photo"
+                >
+                  <ChevronRight size={24} />
+                </button>
+              )}
+            </div>
+
+            <div className="lightbox-info">
+              <div className="lightbox-info-header">
+                <div>
+                  <div className="service-badge-row" style={{ marginBottom: '6px' }}>
+                    <span className="service-badge">{lightboxData.service.badge}</span>
+                    <span className="service-photo-counter" style={{ position: 'static', opacity: 1 }}>
+                      <Images size={11} />
+                      Photo {lightboxData.index + 1} of {lightboxData.service.images.length}
+                    </span>
+                  </div>
+                  <h3 className="lightbox-title">{lightboxData.service.title}</h3>
+                </div>
+
+                <a
+                  href={createWhatsAppServiceLink(lightboxData.service.title)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-gold"
+                  style={{ padding: '0.65rem 1.25rem', fontSize: '0.85rem' }}
+                >
+                  <MessageCircle size={15} />
+                  <span>Inquire This Look</span>
+                </a>
+              </div>
+
+              {/* Lightbox Thumbnails Strip */}
+              {lightboxData.service.images.length > 1 && (
+                <div className="lightbox-thumbs">
+                  {lightboxData.service.images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      className={`lightbox-thumb ${idx === lightboxData.index ? 'active' : ''}`}
+                      onClick={() => setLightboxData({ service: lightboxData.service, index: idx })}
+                      aria-label={`View photo ${idx + 1}`}
+                    >
+                      <img src={img} alt={`Thumbnail ${idx + 1}`} />
+                      <span>{idx + 1}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
