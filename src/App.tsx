@@ -1172,11 +1172,11 @@ export default function App() {
                   href={createBlouseStyleWhatsAppLink(selectedBlouseStyle.name)}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn btn-gold"
-                  style={{ width: '100%' }}
+                  className="btn btn-gold preview-enquire-btn"
+                  style={{ width: '100%', justifyContent: 'center', textAlign: 'center' }}
                 >
                   <MessageCircle size={16} />
-                  <span>Enquire For This Blouse Style on WhatsApp</span>
+                  <span>Enquire For This Blouse Style</span>
                 </a>
               </div>
             </div>
