@@ -61,6 +61,16 @@ body {
   width: 100%;
 }
 
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+input, select, textarea, button {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 /* Typography Hierarchy */
 h1, h2, h3, h4, .font-serif {
   font-family: var(--font-serif);
@@ -379,6 +389,16 @@ button {
   position: relative;
   overflow: hidden;
   white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+  }
 }
 
 .btn-gold {
@@ -516,9 +536,10 @@ button {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 3rem;
   align-items: center;
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -542,6 +563,19 @@ button {
   text-transform: uppercase;
   color: var(--gold-light);
   margin-bottom: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .hero-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    padding: 4px 10px;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.35;
+  }
 }
 
 .hero-title {
@@ -653,7 +687,8 @@ button {
 
 @media (max-width: 640px) {
   .hero-visual-card {
-    max-width: 320px;
+    max-width: min(100%, 320px);
+    width: 100%;
     margin: 1.5rem auto 0 auto;
   }
 }
@@ -772,16 +807,18 @@ button {
 
 @media (max-width: 640px) {
   .floating-pill {
-    padding: 7px 11px;
-    gap: 8px;
+    padding: 6px 10px;
+    gap: 7px;
+    max-width: calc(100% - 16px);
+    box-sizing: border-box;
   }
   .floating-pill-top {
     top: -10px;
-    right: 0;
+    right: 4px;
   }
   .floating-pill-bottom {
     bottom: -10px;
-    left: 0;
+    left: 4px;
   }
 }
 
@@ -1504,6 +1541,46 @@ button {
   }
 }
 
+/* Show More / Show Less Luxury Toggle Button */
+.show-more-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1.5rem 0;
+  width: 100%;
+}
+
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.82rem 2.2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: rgba(14, 24, 42, 0.9);
+  border: 1.5px solid var(--gold-border-bright);
+  color: var(--gold-bright);
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.show-more-btn:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.28) 0%, rgba(14, 24, 42, 0.98) 100%);
+  border-color: var(--gold-bright);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 18px rgba(212, 175, 55, 0.3);
+}
+
+.show-more-btn:active {
+  transform: translateY(0);
+}
+
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--gold-border);
@@ -2193,8 +2270,11 @@ button {
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 992px) {
@@ -2204,7 +2284,16 @@ button {
 }
 
 .contact-details {
-  padding: 2.25rem 1.5rem;
+  padding: 1.5rem 1rem;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .contact-details {
+    padding: 2.25rem 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2216,19 +2305,23 @@ button {
 .contact-info-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  min-width: 0;
+  width: 100%;
 }
 
 .contact-info-entry {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .contact-info-icon {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-sm);
   background: rgba(212, 175, 55, 0.12);
   border: 1px solid var(--gold-border);
@@ -2237,6 +2330,20 @@ button {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+  .contact-info-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.contact-info-text {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .contact-info-text h5 {
@@ -2248,9 +2355,11 @@ button {
 }
 
 .contact-info-text p, .contact-info-text a {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-sub);
   line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-info-text a:hover {
@@ -2261,10 +2370,19 @@ button {
 .consultation-box {
   background: rgba(6, 11, 20, 0.9);
   border-top: 1px solid var(--gold-border);
-  padding: 2.25rem 1.5rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .consultation-box {
+    padding: 2.25rem 1.5rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -2276,7 +2394,9 @@ button {
 }
 
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
+  min-width: 0;
+  width: 100%;
 }
 
 .form-label {
@@ -2291,10 +2411,13 @@ button {
 
 .form-input, .form-select {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--gold-border);
   border-radius: var(--radius-sm);
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.85rem;
   color: var(--cream);
   font-family: inherit;
   font-size: 16px; /* Prevents auto-zoom on iOS */
@@ -2310,6 +2433,19 @@ button {
 .form-select option {
   background: #0a111e;
   color: #fff;
+}
+
+.consultation-submit-btn {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.consultation-wa-btn {
+  padding: 0.8rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 /* Footer */
@@ -2532,6 +2668,8 @@ button {
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 1.75rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Spotlight banner h3/p override to match section style */
@@ -2551,6 +2689,7 @@ button {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -2567,6 +2706,9 @@ button {
   font-size: 0.88rem;
   font-weight: 600;
   transition: opacity 0.2s ease;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .footer-social-link:hover {
@@ -2757,9 +2899,17 @@ button {
 /* 23 Styles Grid */
 .saree-styles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3.5rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .saree-styles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 .saree-style-card {
@@ -2767,12 +2917,21 @@ button {
   background: rgba(14, 24, 42, 0.76);
   border: 1px solid var(--gold-border);
   border-radius: var(--radius-md);
-  padding: 1.6rem 1.4rem 1.4rem;
+  padding: 1.3rem 1.1rem 1.1rem;
   display: flex;
   flex-direction: column;
   transition: var(--transition);
   backdrop-filter: blur(10px);
   overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .saree-style-card {
+    padding: 1.6rem 1.4rem 1.4rem;
+  }
 }
 
 .saree-style-card::before {
@@ -2894,12 +3053,20 @@ button {
 .saree-perks-strip {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
   background: rgba(15, 26, 44, 0.72);
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: var(--radius-lg);
-  padding: 2rem 1.8rem;
+  padding: 1.25rem 1rem;
   backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .saree-perks-strip {
+    padding: 2rem 1.8rem;
+    gap: 1.5rem;
+  }
 }
 
 @media (min-width: 640px) {

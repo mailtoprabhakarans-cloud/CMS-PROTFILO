@@ -3,8 +3,10 @@ import {
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
+  ChevronUp,
   Clock3,
   Crown,
   Images,
@@ -736,9 +738,15 @@ export default function App() {
 
   const closeMenu = () => setMobileMenuOpen(false);
 
+  const [showAllServices, setShowAllServices] = useState<boolean>(false);
+
   const filteredServices = activeCategory === 'all'
     ? servicesData
     : servicesData.filter((s) => s.category === activeCategory);
+
+  const displayedServices = showAllServices
+    ? filteredServices
+    : filteredServices.slice(0, 4);
 
   const handleWizardSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -770,6 +778,7 @@ export default function App() {
   // Saree Draping & Pre-Pleating Styles Filter & Search
   const [drapingFilter, setDrapingFilter] = useState<string>('all');
   const [drapingSearch, setDrapingSearch] = useState<string>('');
+  const [showAllDraping, setShowAllDraping] = useState<boolean>(false);
 
   const filteredDrapingStyles = sareeDrapingStyles.filter((style) => {
     const matchesCategory = drapingFilter === 'all' || style.category === drapingFilter;
@@ -782,6 +791,10 @@ export default function App() {
       style.no.includes(query);
     return matchesCategory && matchesSearch;
   });
+
+  const displayedDrapingStyles = showAllDraping
+    ? filteredDrapingStyles
+    : filteredDrapingStyles.slice(0, 4);
 
   const createDrapingWhatsAppLink = (styleName: string, styleNo: string) => {
     const text = `Hello CMS Fashion Designer, I would like to book the "${styleName}" (#${styleNo}) saree pre-pleating / draping service. Could you please share appointment availability and pricing?`;
@@ -1279,7 +1292,7 @@ export default function App() {
 
             {/* Services Cards Grid */}
             <div className="services-grid">
-              {filteredServices.map((service) => (
+              {displayedServices.map((service) => (
                 <ServiceCard
                   key={service.id}
                   service={service}
@@ -1288,6 +1301,29 @@ export default function App() {
                 />
               ))}
             </div>
+
+            {/* Show More / Show Less Button for Services */}
+            {filteredServices.length > 4 && (
+              <div className="show-more-wrap">
+                <button
+                  type="button"
+                  className="btn show-more-btn"
+                  onClick={() => setShowAllServices(!showAllServices)}
+                >
+                  {showAllServices ? (
+                    <>
+                      <span>Show Less Services</span>
+                      <ChevronUp size={16} />
+                    </>
+                  ) : (
+                    <>
+                      <span>Show All Services (+{filteredServices.length - 4} More)</span>
+                      <ChevronDown size={16} />
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
 
             {/* Bridal & Saree Spotlight Banner */}
             <div className="spotlight-banner">
@@ -1407,7 +1443,7 @@ export default function App() {
             {/* Results Count Bar */}
             <div className="saree-count-bar">
               <span>
-                Showing <strong>{filteredDrapingStyles.length}</strong> of 23 Specialist Draping Services
+                Showing <strong>{displayedDrapingStyles.length}</strong> of {filteredDrapingStyles.length} Specialist Draping Services
               </span>
               {drapingSearch && (
                 <span className="saree-search-indicator">
@@ -1418,7 +1454,7 @@ export default function App() {
 
             {/* 23 Draping Styles Grid */}
             <div className="saree-styles-grid">
-              {filteredDrapingStyles.map((item) => (
+              {displayedDrapingStyles.map((item) => (
                 <div className="saree-style-card" key={item.id}>
                   <div className="saree-card-top">
                     <span className="saree-card-no">#{item.no}</span>
@@ -1448,6 +1484,29 @@ export default function App() {
                 </div>
               ))}
             </div>
+
+            {/* Show More / Show Less Button for Saree Styles */}
+            {filteredDrapingStyles.length > 4 && (
+              <div className="show-more-wrap">
+                <button
+                  type="button"
+                  className="btn show-more-btn"
+                  onClick={() => setShowAllDraping(!showAllDraping)}
+                >
+                  {showAllDraping ? (
+                    <>
+                      <span>Show Less Styles</span>
+                      <ChevronUp size={16} />
+                    </>
+                  ) : (
+                    <>
+                      <span>Show All 23 Styles (+{filteredDrapingStyles.length - 4} More)</span>
+                      <ChevronDown size={16} />
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
 
             {/* Atelier Quality Assurance Ribbon */}
             <div className="saree-perks-strip">
@@ -1769,18 +1828,18 @@ export default function App() {
 
                   <button
                     type="submit"
-                    className="btn btn-gold"
-                    style={{ width: '100%', marginTop: '0.95rem', padding: '1rem 1.6rem', justifyContent: 'center' }}
+                    className="btn btn-gold consultation-submit-btn"
+                    style={{ width: '100%', marginTop: '0.95rem', justifyContent: 'center' }}
                   >
-                    <Mail size={19} />
-                    <span>Send Email Inquiry ({STUDIO_EMAIL})</span>
+                    <Mail size={18} />
+                    <span>Send Email Inquiry</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={handleWhatsAppSubmit}
-                    className="btn btn-whatsapp"
-                    style={{ width: '100%', marginTop: '0.65rem', padding: '0.85rem 1.6rem', justifyContent: 'center' }}
+                    className="btn btn-whatsapp consultation-wa-btn"
+                    style={{ width: '100%', marginTop: '0.65rem', justifyContent: 'center' }}
                   >
                     <MessageCircle size={18} />
                     <span>Or Send via WhatsApp</span>
