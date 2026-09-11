@@ -1826,14 +1826,14 @@ export default function App() {
                     />
                   </div>
 
-                  <button
+                  {/* <button
                     type="submit"
                     className="btn btn-gold consultation-submit-btn"
                     style={{ width: '100%', marginTop: '0.95rem', justifyContent: 'center' }}
                   >
                     <Mail size={18} />
                     <span>Send Email Inquiry</span>
-                  </button>
+                  </button> */}
 
                   <button
                     type="button"
