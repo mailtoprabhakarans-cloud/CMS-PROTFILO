@@ -971,7 +971,7 @@ export default function App() {
 
                 <div className="hero-stats">
                   <div className="stat-item">
-                    <span className="stat-number">10+</span>
+                    <span className="stat-number">4+</span>
                     <span className="stat-label">Years of Mastery</span>
                   </div>
                   <div className="stat-item">
@@ -1895,7 +1895,7 @@ export default function App() {
           </div>
 
           <div className="footer-bottom">
-            <span>© 2026 CMS Fashion Designer. All Rights Reserved. Peelamedu, Coimbatore.</span>
+            <span>© 2022 CMS Fashion Designer. All Rights Reserved. Peelamedu, Coimbatore.</span>
             <span style={{ fontStyle: 'italic', color: 'var(--gold-bright)', fontSize: '0.95rem' }}>
               Your Style, Our Passion.
             </span>
