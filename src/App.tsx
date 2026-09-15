@@ -528,6 +528,29 @@ const testimonials = [
   },
 ];
 
+const localFaqData = [
+  {
+    q: 'Which is the best fashion design studio near Hopes College or Peelamedu?',
+    a: 'CMS Fashion Designer is renowned as the best fashion design studio near Hopes College and Peelamedu, Coimbatore. Conveniently located on Masakalipalayam Road (Velappan Nagar), we specialize in bespoke bridal blouse stitching, intricate Aari hand embroidery, custom designer kurtis, and 23+ saree pre-pleating draping styles with flawless fit.',
+  },
+  {
+    q: 'How close is CMS Fashion Designer to Hope College bus stop?',
+    a: 'We are situated just 2 minutes (approx. 400 meters) from Hope College Bus Stop along Masakalipalayam Road in Peelamedu, Coimbatore (PIN: 641004). Our atelier is exceptionally easy to reach from Avinashi Road, Singanallur, Fun Republic Mall, and Peelamedu Railway Station.',
+  },
+  {
+    q: 'Do you offer emergency or express 48-hour blouse stitching near Peelamedu?',
+    a: 'Yes! We provide express 48-hour bridal stitching and emergency delivery for urgent weddings and celebrations. We also offer same-day saree pre-pleating and box folding so your saree is 100% ready to wear in under 60 seconds.',
+  },
+  {
+    q: 'What makes CMS Fashion Designer the top choice near Hopes and Peelamedu?',
+    a: 'With over 4+ years of specialized couture craftsmanship, 5-star client reviews, one-on-one personal designer consultations, premium linings, overlock seams, and open 7 days a week from 7:00 AM to 10:00 PM (including Sundays), we ensure every client receives royal attention.',
+  },
+  {
+    q: 'Can I walk in on Sundays or book an appointment near Hope College?',
+    a: 'Yes, we are open all 7 days of the week from 7:00 AM to 10:00 PM (Monday through Sunday). Walk-ins are always warmly welcomed, or you can message us directly on WhatsApp at +91 99769 63056 to book your priority consultation slot.',
+  },
+];
+
 const WHATSAPP_PHONE = '919976963056';
 const WHATSAPP_BASE = `https://wa.me/${WHATSAPP_PHONE}`;
 const STUDIO_EMAIL = 'cmsfashiondesigner@gmail.com';
@@ -738,6 +761,8 @@ export default function App() {
 
   const closeMenu = () => setMobileMenuOpen(false);
 
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
   const [showAllServices, setShowAllServices] = useState<boolean>(false);
 
   const filteredServices = activeCategory === 'all'
@@ -818,6 +843,23 @@ export default function App() {
         </a>
       </div>
 
+      {/* Top Local SEO & Landmark Announcement Strip */}
+      <div className="top-seo-strip">
+        <div className="container-max top-seo-strip-inner">
+          <div className="top-seo-strip-left">
+            <MapPin size={13} />
+            <span><strong>Best Fashion Design Near Hopes College &amp; Peelamedu</strong> · Masakalipalayam Rd, Coimbatore</span>
+          </div>
+          <div className="top-seo-strip-right">
+            <Clock3 size={13} />
+            <span>Open All 7 Days (7:00 AM – 10:00 PM)</span>
+            <span className="top-seo-strip-divider">|</span>
+            <Phone size={13} />
+            <a href="tel:+919976963056">+91 99769 63056</a>
+          </div>
+        </div>
+      </div>
+
       {/* Sticky Luxury Navbar */}
       <header className="site-header">
         <div className="container-max">
@@ -838,8 +880,10 @@ export default function App() {
               <a href="#services" className="nav-link">Services</a>
               <a href="#saree-styles" className="nav-link">Saree Draping</a>
               <a href="#craftsmanship" className="nav-link">Craftsmanship</a>
+              <a href="#local-spotlight" className="nav-link">Near Hopes</a>
               <a href="#portfolio" className="nav-link">Lookbook</a>
               <a href="#testimonials" className="nav-link">Reviews</a>
+              <a href="#faq" className="nav-link">FAQ</a>
               <a href="#contact" className="nav-link">Location</a>
             </nav>
 
@@ -890,17 +934,25 @@ export default function App() {
                 <span className="mobile-nav-num">05</span>
                 <span>The CMS Craftsmanship</span>
               </a>
-              <a href="#portfolio" onClick={closeMenu} className="mobile-nav-item">
+              <a href="#local-spotlight" onClick={closeMenu} className="mobile-nav-item">
                 <span className="mobile-nav-num">06</span>
+                <span>Best Design Near Hopes</span>
+              </a>
+              <a href="#portfolio" onClick={closeMenu} className="mobile-nav-item">
+                <span className="mobile-nav-num">07</span>
                 <span>Selected Lookbook</span>
               </a>
               <a href="#testimonials" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">07</span>
+                <span className="mobile-nav-num">08</span>
                 <span>Client Reviews</span>
               </a>
+              <a href="#faq" onClick={closeMenu} className="mobile-nav-item">
+                <span className="mobile-nav-num">09</span>
+                <span>Local FAQ</span>
+              </a>
               <a href="#contact" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">08</span>
-                <span>Studio Location & Contact</span>
+                <span className="mobile-nav-num">10</span>
+                <span>Studio Location &amp; Contact</span>
               </a>
             </div>
 
@@ -941,7 +993,7 @@ export default function App() {
               <div className="hero-content">
                 <div className="hero-badge">
                   <Crown size={15} />
-                  <span>Est. 2022 · Coimbatore's Haute Couture Atelier</span>
+                  <span>#1 Best Fashion Design Near Hopes College &amp; Peelamedu · Est. 2022</span>
                 </div>
 
                 <h1 className="hero-title">
@@ -950,7 +1002,7 @@ export default function App() {
                 </h1>
 
                 <p className="hero-subtitle">
-                  Bespoke bridal blouses, exquisite hand Aari embroidery, custom designer kurtis, and effortless saree pre-pleating — sculpted to celebrate your unique beauty with absolute precision.
+                  Ranked the #1 destination for the <strong>best fashion design near Hopes College and Peelamedu</strong>. Bespoke bridal blouses, exquisite hand Aari embroidery, custom designer kurtis, and effortless saree pre-pleating — sculpted to celebrate your unique beauty with absolute precision.
                 </p>
 
                 <div className="hero-ctas">
@@ -1687,6 +1739,150 @@ export default function App() {
           </div>
         </section>
 
+        {/* Local Landmark & Proximity SEO Section */}
+        <section id="local-spotlight" className="local-spotlight-section section-pad">
+          <div className="container-max">
+            <div className="section-header-center">
+              <div className="section-eyebrow">
+                <span /> 07 / Local Landmark &amp; Studio <span />
+              </div>
+              <h2 className="section-title">
+                Best Fashion Design Near <br />
+                <em>Hopes College &amp; Peelamedu</em>
+              </h2>
+              <p className="section-desc">
+                CMS Fashion Designer is Coimbatore’s premier bridal atelier and couture boutique, situated right on Masakalipalayam Road near Hope College. Experience master pattern cuts, royal bridal Aari hand embroidery, and 23+ saree draping styles in your neighborhood.
+              </p>
+            </div>
+
+            <div className="local-spotlight-grid">
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <MapPin size={24} />
+                </div>
+                <span className="local-card-badge">2 Mins From Hopes</span>
+                <h3 className="local-card-title">Hope College &amp; Peelamedu</h3>
+                <p className="local-card-desc">
+                  Conveniently situated at Velappan Nagar on Masakalipalayam Road. Minutes away from Hope College Bus Stop, Avinashi Road, Singanallur, and Peelamedu Junction.
+                </p>
+              </div>
+
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <Crown size={24} />
+                </div>
+                <span className="local-card-badge">Signature Specialist</span>
+                <h3 className="local-card-title">Bespoke Bridal Blouses</h3>
+                <p className="local-card-desc">
+                  Master pattern-making for princess cuts, katori cuts, high necks, and deep designer backs engineered to contour your posture with supreme comfort.
+                </p>
+              </div>
+
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <Sparkles size={24} />
+                </div>
+                <span className="local-card-badge">Haute Bridal Work</span>
+                <h3 className="local-card-title">Hand Aari &amp; Zardozi Embroidery</h3>
+                <p className="local-card-desc">
+                  Custom handcrafted bridal embroidery using pure zari, cut beads, and kundans meticulously styled to match your wedding saree borders and themes.
+                </p>
+              </div>
+
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <Zap size={24} />
+                </div>
+                <span className="local-card-badge">Open 7 Days (7AM–10PM)</span>
+                <h3 className="local-card-title">48-Hour Express &amp; Sunday Open</h3>
+                <p className="local-card-desc">
+                  Need emergency stitching for a celebration? We provide express 48-hour bridal blouse delivery and same-day saree pre-pleating. Sunday walk-ins welcome!
+                </p>
+              </div>
+            </div>
+
+            {/* Proximity & Direction Ribbon */}
+            <div className="local-proximity-box">
+              <div className="local-proximity-info">
+                <h3>Easily Accessible from Anywhere in Coimbatore</h3>
+                <p>
+                  Our atelier on Masakalipalayam Road provides direct connectivity with easy street parking for bridal party consultations and fabric trials.
+                </p>
+                <div className="local-landmarks-list">
+                  <span className="local-landmark-tag"><MapPin size={12} /> 2 Mins from Hope College</span>
+                  <span className="local-landmark-tag"><MapPin size={12} /> 4 Mins from Peelamedu Rly</span>
+                  <span className="local-landmark-tag"><MapPin size={12} /> 5 Mins from Fun Mall</span>
+                  <span className="local-landmark-tag"><MapPin size={12} /> 6 Mins from Singanallur</span>
+                  <span className="local-landmark-tag"><MapPin size={12} /> Masakalipalayam Road</span>
+                </div>
+              </div>
+
+              <div className="local-proximity-actions">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=No.+42%2F30%2C+Velappan+Nagar%2C+Masakalipalayam+Road%2C+Hope+College%2C+Peelamedu%2C+Coimbatore+641004"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-gold"
+                >
+                  <MapPin size={16} />
+                  <span>Get Directions on Google Maps</span>
+                </a>
+                <a
+                  href="tel:+919976963056"
+                  className="btn btn-outline"
+                >
+                  <Phone size={15} />
+                  <span>Call Atelier (+91 99769 63056)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Local SEO & Studio FAQ Section */}
+        <section id="faq" className="faq-section section-pad" style={{ paddingTop: 0 }}>
+          <div className="container-max">
+            <div className="section-header-center">
+              <div className="section-eyebrow">
+                <span /> 08 / Frequently Asked Questions <span />
+              </div>
+              <h2 className="section-title">
+                Common Questions About Our <br />
+                <em>Fashion Design Studio Near Hopes</em>
+              </h2>
+              <p className="section-desc">
+                Everything you need to know about visiting CMS Fashion Designer in Peelamedu, express turnaround times, and bridal booking.
+              </p>
+            </div>
+
+            <div className="faq-list">
+              {localFaqData.map((item, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div key={idx} className={`faq-item ${isOpen ? 'active' : ''}`}>
+                    <button
+                      type="button"
+                      className="faq-question-btn"
+                      onClick={() => setOpenFaq(isOpen ? null : idx)}
+                      aria-expanded={isOpen}
+                    >
+                      <span>{item.q}</span>
+                      <span className="faq-icon-wrap">
+                        {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <div className="faq-answer">
+                        <p>{item.a}</p>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* Location & Interactive Consultation Wizard */}
         <section id="contact" className="contact-section section-pad">
           <div className="container-max">
@@ -1694,7 +1890,7 @@ export default function App() {
               {/* Studio Details */}
               <div className="contact-details">
                 <div className="section-eyebrow">
-                  <span /> 07 / Visit Our Studio <span />
+                  <span /> 09 / Visit Our Studio <span />
                 </div>
                 <h2 className="section-title">
                   Let’s Create Your <br />
@@ -1716,6 +1912,16 @@ export default function App() {
                         Masakalipalayam Road, Hope College,<br />
                         Peelamedu, Coimbatore – 641004
                       </p>
+                      <a
+                        href="https://www.google.com/maps/search/?api=1&query=No.+42%2F30%2C+Velappan+Nagar%2C+Masakalipalayam+Road%2C+Hope+College%2C+Peelamedu%2C+Coimbatore+641004"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-outline"
+                        style={{ marginTop: '0.65rem', padding: '0.45rem 0.9rem', fontSize: '0.8rem', display: 'inline-flex' }}
+                      >
+                        <MapPin size={14} />
+                        <span>Get Directions from Hopes / Peelamedu</span>
+                      </a>
                     </div>
                   </div>
 

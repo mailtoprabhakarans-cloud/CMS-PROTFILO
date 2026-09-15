@@ -1,0 +1,32 @@
+# https://www.robotstxt.org/robotstxt.html
+# Robots.txt for CMS Fashion Designer - Best Fashion Design Near Hopes College & Peelamedu, Coimbatore
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?*query=
+
+# Crawl delay for gentle indexing
+Crawl-delay: 1
+
+# Specific search engine bots
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap Location
+Sitemap: https://cmsfashiondesigner.com/sitemap.xml
