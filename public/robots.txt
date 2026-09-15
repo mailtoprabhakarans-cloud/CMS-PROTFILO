@@ -29,4 +29,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap Location
-Sitemap: https://cmsfashiondesigner.com/sitemap.xml
+Sitemap: https://www.cmsfashions.in/sitemap.xml

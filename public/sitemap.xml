@@ -3,77 +3,39 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Primary Homepage - Best Fashion Design Near Hopes College & Peelamedu -->
   <url>
-    <loc>https://cmsfashiondesigner.com/</loc>
+    <loc>https://www.cmsfashions.in/</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://cmsfashiondesigner.com/cms-logo.jpg</image:loc>
-      <image:title>CMS Fashion Designer - Best Fashion Design Near Hopes College &amp; Peelamedu</image:title>
-      <image:caption>Premier bridal tailoring and couture design studio in Peelamedu, Coimbatore</image:caption>
+      <image:loc>https://www.cmsfashions.in/cms-logo.jpg</image:loc>
+      <image:title>CMS Fashion Designer - Best Fashion Design Near Hopes College and Peelamedu Coimbatore</image:title>
+      <image:caption>Bespoke bridal tailoring and haute couture studio in Peelamedu, Coimbatore</image:caption>
     </image:image>
-  </url>
-
-  <!-- Local SEO & Studio Location Spotlight: Hopes & Peelamedu -->
-  <url>
-    <loc>https://cmsfashiondesigner.com/#local-spotlight</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- Bespoke Blouse Design & Tailoring -->
-  <url>
-    <loc>https://cmsfashiondesigner.com/#blouses</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://cmsfashiondesigner.com/images/service-blouse.jpg</image:loc>
+      <image:loc>https://www.cmsfashions.in/images/service-blouse.jpg</image:loc>
       <image:title>Designer Blouse Stitching Near Hopes College Peelamedu</image:title>
       <image:caption>Princess cut, katori cut, and bridal designer blouses in Coimbatore</image:caption>
     </image:image>
-  </url>
-
-  <!-- Bridal Aari & Zardozi Hand Embroidery -->
-  <url>
-    <loc>https://cmsfashiondesigner.com/#services</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://cmsfashiondesigner.com/images/service-aari.jpg</image:loc>
-      <image:title>Bridal Aari Handwork Studio Peelamedu Coimbatore</image:title>
-      <image:caption>Custom zardozi, kundan, and bridal embroidery near Hope College</image:caption>
+      <image:loc>https://www.cmsfashions.in/images/service-aari.jpg</image:loc>
+      <image:title>Bridal Aari Hand Embroidery Near Hope College Peelamedu</image:title>
+      <image:caption>Exquisite hand Aari and zardozi needlework Coimbatore</image:caption>
     </image:image>
-  </url>
-
-  <!-- Saree Pre-Pleating & 23+ Draping Styles -->
-  <url>
-    <loc>https://cmsfashiondesigner.com/#saree-styles</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://cmsfashiondesigner.com/images/service-saree-box1.jpg</image:loc>
-      <image:title>Saree Pre Pleating and Box Folding Near Hopes Peelamedu</image:title>
-      <image:caption>23+ ready-to-wear saree draping styles in Coimbatore</image:caption>
+      <image:loc>https://www.cmsfashions.in/images/service-saree-box1.jpg</image:loc>
+      <image:title>Saree Pre-Pleating and Box Folding Peelamedu Coimbatore</image:title>
+      <image:caption>23+ ready to wear saree draping styles near Hopes College</image:caption>
     </image:image>
-  </url>
-
-  <!-- Local FAQ Section -->
-  <url>
-    <loc>https://cmsfashiondesigner.com/#faq</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Contact & Location: Masakalipalayam Road, Hope College, Peelamedu -->
-  <url>
-    <loc>https://cmsfashiondesigner.com/#contact</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.cmsfashions.in/images/service-tops.jpg</image:loc>
+      <image:title>Custom Designer Kurtis and Tops Peelamedu</image:title>
+      <image:caption>Tailored anarkali and designer tops near Hopes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.cmsfashions.in/images/service-kids-1.png</image:loc>
+      <image:title>Custom Kidswear and Pattu Pavadai Hope College</image:title>
+      <image:caption>Handcrafted traditional pattu pavadai sets Coimbatore</image:caption>
+    </image:image>
   </url>
 </urlset>
