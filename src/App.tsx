@@ -530,20 +530,28 @@ const testimonials = [
 
 const localFaqData = [
   {
-    q: 'Which is the best fashion design studio near Hopes College or Peelamedu?',
-    a: 'CMS Fashion Designer is renowned as the best fashion design studio near Hopes College and Peelamedu, Coimbatore. Conveniently located on Masakalipalayam Road (Velappan Nagar), we specialize in bespoke bridal blouse stitching, intricate Aari hand embroidery, custom designer kurtis, and 23+ saree pre-pleating draping styles with flawless fit.',
+    q: 'Where can I find the best ladies tailors near Hopes?',
+    a: 'CMS Fashion Designer is widely recognized as the #1 ladies tailor near Hopes, situated at No. 42/30, Velappan Nagar, Masakalipalayam Road (near Hope College), Peelamedu, Coimbatore. We specialize in precision blouse cutting, lining blouses, salwar suits, kurtis, gowns, and wedding party wear with a 100% fit guarantee.',
   },
   {
-    q: 'How close is CMS Fashion Designer to Hope College bus stop?',
+    q: 'Which is the top designer shop near Hopes for customized bridal wear?',
+    a: 'CMS Fashion Designer is the premier designer shop near Hopes. Our boutique offers personalized bridal consultations, custom necklines, wedding lehengas, and haute couture ethnic wear crafted with premium fabrics and artisanal finish.',
+  },
+  {
+    q: 'Where can I get expert blouse stitching (blowes stiching) near Hopes?',
+    a: 'CMS Fashion Designer is the specialist for blouse stitching (often searched as blowes stiching) near Hopes. We tailor princess cut, katori cut, hi-neck, padded, and deep back bridal blouses with 48-hour express stitching options and overlock finishing.',
+  },
+  {
+    q: 'Who is the top Aari work designer and Aari work designer shop near Hopes?',
+    a: 'CMS Fashion Designer is the leading Aari work designer shop near Hopes. Our in-house aari designers craft royal handcrafted bridal maggam and zardozi embroidery with genuine zari, cut beads, kundan, and pearl embellishments matching your wedding saree border.',
+  },
+  {
+    q: 'Which is the best saree pre pleating shop near Hopes?',
+    a: 'CMS Fashion Designer is the #1 saree pre pleating shop near Hopes and Peelamedu. We provide 23+ couture saree pleating styles, box folding, and steam press so your saree is 100% ready to wear in under 60 seconds, with same-day delivery available.',
+  },
+  {
+    q: 'How close is CMS Fashion Designer to Hope College bus stop in Peelamedu?',
     a: 'We are situated just 2 minutes (approx. 400 meters) from Hope College Bus Stop along Masakalipalayam Road in Peelamedu, Coimbatore (PIN: 641004). Our atelier is exceptionally easy to reach from Avinashi Road, Singanallur, Fun Republic Mall, and Peelamedu Railway Station.',
-  },
-  {
-    q: 'Do you offer emergency or express 48-hour blouse stitching near Peelamedu?',
-    a: 'Yes! We provide express 48-hour bridal stitching and emergency delivery for urgent weddings and celebrations. We also offer same-day saree pre-pleating and box folding so your saree is 100% ready to wear in under 60 seconds.',
-  },
-  {
-    q: 'What makes CMS Fashion Designer the top choice near Hopes and Peelamedu?',
-    a: 'With over 4+ years of specialized couture craftsmanship, 5-star client reviews, one-on-one personal designer consultations, premium linings, overlock seams, and open 7 days a week from 7:00 AM to 10:00 PM (including Sundays), we ensure every client receives royal attention.',
   },
   {
     q: 'Can I walk in on Sundays or book an appointment near Hope College?',
@@ -993,7 +1001,7 @@ export default function App() {
               <div className="hero-content">
                 <div className="hero-badge">
                   <Crown size={15} />
-                  <span>#1 Best Fashion Design Near Hopes College &amp; Peelamedu · Est. 2022</span>
+                  <span>#1 Ladies Tailors &amp; Designer Shop Near Hopes · Peelamedu · Est. 2022</span>
                 </div>
 
                 <h1 className="hero-title">
@@ -1002,7 +1010,7 @@ export default function App() {
                 </h1>
 
                 <p className="hero-subtitle">
-                  Ranked the #1 destination for the <strong>best fashion design near Hopes College and Peelamedu</strong>. Bespoke bridal blouses, exquisite hand Aari embroidery, custom designer kurtis, and effortless saree pre-pleating — sculpted to celebrate your unique beauty with absolute precision.
+                  Ranked the #1 destination for <strong>ladies tailors and designer shop near Hopes</strong>. Bespoke bridal blouse stitching (blowes stiching), exquisite hand Aari work embroidery, custom designer kurtis, and 23+ saree pre-pleating styles — sculpted to celebrate your unique beauty with absolute precision on Masakalipalayam Road, Peelamedu.
                 </p>
 
                 <div className="hero-ctas">
@@ -1019,6 +1027,20 @@ export default function App() {
                     <span>Explore Blouse Styles</span>
                     <ArrowRight size={16} />
                   </a>
+                </div>
+
+                {/* Hero Quick Search Intent Pills */}
+                <div className="hero-search-strip">
+                  <span className="hero-search-label">
+                    <Search size={14} /> Popular Searches:
+                  </span>
+                  <div className="hero-search-pills">
+                    <a href="#local-spotlight" className="hero-search-pill">Ladies Tailors Near Hopes</a>
+                    <a href="#local-spotlight" className="hero-search-pill">Designer Shop Near Hopes</a>
+                    <a href="#blouses" className="hero-search-pill">Blouse Stitching (Blowes Stiching)</a>
+                    <a href="#services" className="hero-search-pill">Aari Work Designer Shop</a>
+                    <a href="#saree-styles" className="hero-search-pill">Saree Pre Pleating Near Hopes</a>
+                  </div>
                 </div>
 
                 <div className="hero-stats">
@@ -1747,34 +1769,23 @@ export default function App() {
                 <span /> 07 / Local Landmark &amp; Studio <span />
               </div>
               <h2 className="section-title">
-                Best Fashion Design Near <br />
-                <em>Hopes College &amp; Peelamedu</em>
+                #1 Ladies Tailors &amp; Designer Shop <br />
+                <em>Near Hopes &amp; Peelamedu</em>
               </h2>
               <p className="section-desc">
-                CMS Fashion Designer is Coimbatore’s premier bridal atelier and couture boutique, situated right on Masakalipalayam Road near Hope College. Experience master pattern cuts, royal bridal Aari hand embroidery, and 23+ saree draping styles in your neighborhood.
+                CMS Fashion Designer is the #1 destination when searching for <strong>ladies tailors near Hopes</strong>, exclusive <strong>designer shop near Hopes</strong>, express <strong>blouse stitching (blowes stiching) near Hopes</strong>, bespoke <strong>Aari work designer shop near Hopes</strong>, or <strong>saree pre pleating shop near Hopes</strong>. Located right on Masakalipalayam Road near Hope College, Peelamedu.
               </p>
             </div>
 
             <div className="local-spotlight-grid">
               <div className="local-card">
                 <div className="local-card-icon-wrap">
-                  <MapPin size={24} />
-                </div>
-                <span className="local-card-badge">2 Mins From Hopes</span>
-                <h3 className="local-card-title">Hope College &amp; Peelamedu</h3>
-                <p className="local-card-desc">
-                  Conveniently situated at Velappan Nagar on Masakalipalayam Road. Minutes away from Hope College Bus Stop, Avinashi Road, Singanallur, and Peelamedu Junction.
-                </p>
-              </div>
-
-              <div className="local-card">
-                <div className="local-card-icon-wrap">
                   <Crown size={24} />
                 </div>
-                <span className="local-card-badge">Signature Specialist</span>
-                <h3 className="local-card-title">Bespoke Bridal Blouses</h3>
+                <span className="local-card-badge">#1 Ladies Tailor Near Hopes</span>
+                <h3 className="local-card-title">Ladies Tailors Near Hopes</h3>
                 <p className="local-card-desc">
-                  Master pattern-making for princess cuts, katori cuts, high necks, and deep designer backs engineered to contour your posture with supreme comfort.
+                  Ranked top choice for custom women's tailoring near Hopes. Master pattern cutting for designer blouses, salwar suits, kurtis, anarkalis, and bridal lehengas with a 100% fit guarantee.
                 </p>
               </div>
 
@@ -1782,10 +1793,10 @@ export default function App() {
                 <div className="local-card-icon-wrap">
                   <Sparkles size={24} />
                 </div>
-                <span className="local-card-badge">Haute Bridal Work</span>
-                <h3 className="local-card-title">Hand Aari &amp; Zardozi Embroidery</h3>
+                <span className="local-card-badge">Exclusive Bridal Studio</span>
+                <h3 className="local-card-title">Designer Shop Near Hopes</h3>
                 <p className="local-card-desc">
-                  Custom handcrafted bridal embroidery using pure zari, cut beads, and kundans meticulously styled to match your wedding saree borders and themes.
+                  Coimbatore’s premier fashion designer boutique near Hopes. One-on-one bridal styling consultations, bespoke neckline designing, custom bridal wear, and contemporary silhouette crafting.
                 </p>
               </div>
 
@@ -1793,10 +1804,43 @@ export default function App() {
                 <div className="local-card-icon-wrap">
                   <Zap size={24} />
                 </div>
-                <span className="local-card-badge">Open 7 Days (7AM–10PM)</span>
-                <h3 className="local-card-title">48-Hour Express &amp; Sunday Open</h3>
+                <span className="local-card-badge">Signature Specialist · 48H Express</span>
+                <h3 className="local-card-title">Blouse Stitching &amp; Blowes Stiching Near Hopes</h3>
                 <p className="local-card-desc">
-                  Need emergency stitching for a celebration? We provide express 48-hour bridal blouse delivery and same-day saree pre-pleating. Sunday walk-ins welcome!
+                  Master blouse stitching (blowes stiching) near Hopes: princess cut, katori cut, high neck, padded, deep designer backs, lining blouses, and 48-hour express delivery.
+                </p>
+              </div>
+
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <Crown size={24} />
+                </div>
+                <span className="local-card-badge">Haute Bridal Handwork</span>
+                <h3 className="local-card-title">Aari Work Designer Shop Near Hopes</h3>
+                <p className="local-card-desc">
+                  Leading Aari work designer shop &amp; aari designer near Hopes. Intricate bridal Aari embroidery, metallic zardozi, kundan stones, cut beads, and pearl handwork tailored to your wedding saree.
+                </p>
+              </div>
+
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <Sparkles size={24} />
+                </div>
+                <span className="local-card-badge">23+ Styles · 60-Sec Draping</span>
+                <h3 className="local-card-title">Saree Pre Pleating Shop Near Hopes</h3>
+                <p className="local-card-desc">
+                  Coimbatore's top saree pre pleating shop near Hopes. 23+ couture draping styles, crisp steam iron box folding, and same-day delivery so you can wear your saree in just 60 seconds.
+                </p>
+              </div>
+
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <MapPin size={24} />
+                </div>
+                <span className="local-card-badge">2 Mins From Hope College</span>
+                <h3 className="local-card-title">Convenient Location &amp; Sunday Open</h3>
+                <p className="local-card-desc">
+                  Situated at Velappan Nagar on Masakalipalayam Road, Peelamedu. Open 7 days a week (7 AM to 10 PM) including Sundays. Easy street parking and instant WhatsApp booking.
                 </p>
               </div>
             </div>
@@ -1847,11 +1891,11 @@ export default function App() {
                 <span /> 08 / Frequently Asked Questions <span />
               </div>
               <h2 className="section-title">
-                Common Questions About Our <br />
-                <em>Fashion Design Studio Near Hopes</em>
+                Common Questions About Tailoring &amp; <br />
+                <em>Designer Studio Near Hopes</em>
               </h2>
               <p className="section-desc">
-                Everything you need to know about visiting CMS Fashion Designer in Peelamedu, express turnaround times, and bridal booking.
+                Everything you need to know about ladies tailors near Hopes, blouse stitching (blowes stiching), Aari work, and saree pre pleating in Peelamedu, Coimbatore.
               </p>
             </div>
 
@@ -2097,6 +2141,25 @@ export default function App() {
               >
                 <MessageCircle size={18} /> WhatsApp Us
               </a>
+            </div>
+          </div>
+
+          {/* SEO Search Directory Tags for Crawler Indexing & Local Intent */}
+          <div className="footer-seo-directory">
+            <h4 className="footer-seo-title">Popular Searches Near Hopes, Peelamedu:</h4>
+            <div className="footer-seo-tags">
+              <a href="#local-spotlight" className="footer-seo-tag">Ladies tailors near hopes</a>
+              <a href="#local-spotlight" className="footer-seo-tag">Designer shop near hopes</a>
+              <a href="#blouses" className="footer-seo-tag">Blowes stiching near hopes</a>
+              <a href="#blouses" className="footer-seo-tag">Blouse stitching near hopes</a>
+              <a href="#services" className="footer-seo-tag">Aari work designer Shop near hopes</a>
+              <a href="#services" className="footer-seo-tag">Aari designer near hopes</a>
+              <a href="#services" className="footer-seo-tag">Aari work near hopes</a>
+              <a href="#saree-styles" className="footer-seo-tag">Saree pre pleating shop near hopes</a>
+              <a href="#saree-styles" className="footer-seo-tag">Saree pre pleating near hopes</a>
+              <a href="#local-spotlight" className="footer-seo-tag">Ladies tailor near hopes college</a>
+              <a href="#local-spotlight" className="footer-seo-tag">Ladies tailor Peelamedu</a>
+              <a href="#contact" className="footer-seo-tag">Masakalipalayam road tailoring</a>
             </div>
           </div>
 
