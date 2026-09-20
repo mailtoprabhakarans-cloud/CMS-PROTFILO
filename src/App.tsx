@@ -531,26 +531,26 @@ const testimonials = [
 const localFaqData = [
   {
     q: 'Where can I find the best ladies tailors near Hopes?',
-    a: 'CMS Fashion Designer is widely recognized as the #1 ladies tailor near Hopes, situated at No. 42/30, Velappan Nagar, Masakalipalayam Road (near Hope College), Peelamedu, Coimbatore. We specialize in precision blouse cutting, lining blouses, salwar suits, kurtis, gowns, and wedding party wear with a 100% fit guarantee.',
+    a: 'CMS Fashions Designer is widely recognized as the #1 ladies tailor near Hopes, situated at No. 42/30, Velappan Nagar, Masakalipalayam Road (near Hope College), Peelamedu, Coimbatore. We specialize in precision blouse cutting, lining blouses, salwar suits, kurtis, gowns, and wedding party wear with a 100% fit guarantee.',
   },
   {
     q: 'Which is the top designer shop near Hopes for customized bridal wear?',
-    a: 'CMS Fashion Designer is the premier designer shop near Hopes. Our boutique offers personalized bridal consultations, custom necklines, wedding lehengas, and haute couture ethnic wear crafted with premium fabrics and artisanal finish.',
+    a: 'CMS Fashions Designer is the premier designer shop near Hopes. Our boutique offers personalized bridal consultations, custom necklines, wedding lehengas, and haute couture ethnic wear crafted with premium fabrics and artisanal finish.',
   },
   {
     q: 'Where can I get expert blouse stitching (blowes stiching) near Hopes?',
-    a: 'CMS Fashion Designer is the specialist for blouse stitching (often searched as blowes stiching) near Hopes. We tailor princess cut, katori cut, hi-neck, padded, and deep back bridal blouses with 48-hour express stitching options and overlock finishing.',
+    a: 'CMS Fashions Designer is the specialist for blouse stitching (often searched as blowes stiching) near Hopes. We tailor princess cut, katori cut, hi-neck, padded, and deep back bridal blouses with 48-hour express stitching options and overlock finishing.',
   },
   {
     q: 'Who is the top Aari work designer and Aari work designer shop near Hopes?',
-    a: 'CMS Fashion Designer is the leading Aari work designer shop near Hopes. Our in-house aari designers craft royal handcrafted bridal maggam and zardozi embroidery with genuine zari, cut beads, kundan, and pearl embellishments matching your wedding saree border.',
+    a: 'CMS Fashions Designer is the leading Aari work designer shop near Hopes. Our in-house aari designers craft royal handcrafted bridal maggam and zardozi embroidery with genuine zari, cut beads, kundan, and pearl embellishments matching your wedding saree border.',
   },
   {
     q: 'Which is the best saree pre pleating shop near Hopes?',
-    a: 'CMS Fashion Designer is the #1 saree pre pleating shop near Hopes and Peelamedu. We provide 23+ couture saree pleating styles, box folding, and steam press so your saree is 100% ready to wear in under 60 seconds, with same-day delivery available.',
+    a: 'CMS Fashions Designer is the #1 saree pre pleating shop near Hopes and Peelamedu. We provide 23+ couture saree pleating styles, box folding, and steam press so your saree is 100% ready to wear in under 60 seconds, with same-day delivery available.',
   },
   {
-    q: 'How close is CMS Fashion Designer to Hope College bus stop in Peelamedu?',
+    q: 'How close is CMS Fashions Designer to Hope College bus stop in Peelamedu?',
     a: 'We are situated just 2 minutes (approx. 400 meters) from Hope College Bus Stop along Masakalipalayam Road in Peelamedu, Coimbatore (PIN: 641004). Our atelier is exceptionally easy to reach from Avinashi Road, Singanallur, Fun Republic Mall, and Peelamedu Railway Station.',
   },
   {
@@ -786,7 +786,7 @@ export default function App() {
     const namePart = clientName.trim() ? `Client Name: ${clientName.trim()}\n` : '';
     const datePart = occasionDate.trim() ? `Approximate Event Date: ${occasionDate.trim()}\n` : '';
     const subject = `Consultation Inquiry: ${wizardService} ${clientName.trim() ? `- ${clientName.trim()}` : ''}`;
-    const body = `Hello CMS Fashion Designer Team,\n\nI would like to book a consultation for:\n\n• Service: ${wizardService}\n• Turnaround Urgency: ${wizardUrgency}\n${namePart ? `• ${namePart}` : ''}${datePart ? `• ${datePart}` : ''}\nPlease share consultation availability, design catalogs, and pricing details.\n\nThank you!`;
+    const body = `Hello CMS Fashions Designer Team,\n\nI would like to book a consultation for:\n\n• Service: ${wizardService}\n• Turnaround Urgency: ${wizardUrgency}\n${namePart ? `• ${namePart}` : ''}${datePart ? `• ${datePart}` : ''}\nPlease share consultation availability, design catalogs, and pricing details.\n\nThank you!`;
 
     window.location.href = `mailto:${STUDIO_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
@@ -794,17 +794,17 @@ export default function App() {
   const handleWhatsAppSubmit = () => {
     const namePart = clientName.trim() ? `My name is ${clientName.trim()}. ` : '';
     const datePart = occasionDate.trim() ? `for my upcoming event around ${occasionDate}. ` : '';
-    const message = `Hello CMS Fashion Designer! ${namePart}I would like to book a consultation for ${wizardService} with ${wizardUrgency} timeline ${datePart}Could you please share appointment details and design options?`;
+    const message = `Hello CMS Fashions Designer! ${namePart}I would like to book a consultation for ${wizardService} with ${wizardUrgency} timeline ${datePart}Could you please share appointment details and design options?`;
     window.open(`${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const createWhatsAppServiceLink = (serviceTitle: string) => {
-    const text = `Hello CMS Fashion Designer, I am interested in your "${serviceTitle}" service. Could you please share the design options and pricing?`;
+    const text = `Hello CMS Fashions Designer, I am interested in your "${serviceTitle}" service. Could you please share the design options and pricing?`;
     return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
   };
 
   const createBlouseStyleWhatsAppLink = (styleName: string) => {
-    const text = `Hello CMS Fashion Designer, I love your "${styleName}" design. Can I book an appointment to get this tailored for my saree?`;
+    const text = `Hello CMS Fashions Designer, I love your "${styleName}" design. Can I book an appointment to get this tailored for my saree?`;
     return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
   };
 
@@ -830,7 +830,7 @@ export default function App() {
     : filteredDrapingStyles.slice(0, 4);
 
   const createDrapingWhatsAppLink = (styleName: string, styleNo: string) => {
-    const text = `Hello CMS Fashion Designer, I would like to book the "${styleName}" (#${styleNo}) saree pre-pleating / draping service. Could you please share appointment availability and pricing?`;
+    const text = `Hello CMS Fashions Designer, I would like to book the "${styleName}" (#${styleNo}) saree pre-pleating / draping service. Could you please share appointment availability and pricing?`;
     return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
   };
 
@@ -842,7 +842,7 @@ export default function App() {
         <span>Coimbatore's Premier Bespoke & Bridal Atelier</span>
         · Est. 2022 · Peelamedu Hope College ·
         <a
-          href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I would like to book a bridal consultation.')}`}
+          href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to book a bridal consultation.')}`}
           target="_blank"
           rel="noreferrer"
           style={{ textDecoration: 'underline', color: 'var(--gold-bright)', fontWeight: 700 }}
@@ -872,9 +872,9 @@ export default function App() {
       <header className="site-header">
         <div className="container-max">
           <div className="nav-inner">
-            <a href="#top" className="brand-link" aria-label="CMS Fashion Designer Home">
+            <a href="#top" className="brand-link" aria-label="CMS Fashions Designer Home">
               <div className="brand-crest">
-                <img src="/cms-logo.jpg" alt="CMS Fashion Designer Crest Logo" />
+                <img src="/cms-logo.jpg" alt="CMS Fashions Designer Crest Logo" />
               </div>
               <div className="brand-text">
                 <span className="brand-title">CMS</span>
@@ -897,7 +897,7 @@ export default function App() {
 
             <div className="nav-actions">
               <a
-                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I would like to book an appointment.')}`}
+                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to book an appointment.')}`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-gold nav-cta"
@@ -966,7 +966,7 @@ export default function App() {
 
             <div className="mobile-drawer-footer">
               <a
-                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I would like to book a bridal consultation.')}`}
+                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to book a bridal consultation.')}`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-gold"
@@ -1015,7 +1015,7 @@ export default function App() {
 
                 <div className="hero-ctas">
                   <a
-                    href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I would like to book a consultation for my upcoming celebration.')}`}
+                    href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to book a consultation for my upcoming celebration.')}`}
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-gold"
@@ -1282,7 +1282,7 @@ export default function App() {
                 <em>Finds Its True Expression.</em>
               </h2>
               <p className="section-desc">
-                Located in Hope College, Peelamedu, CMS Fashion Designer has spent nearly a decade perfecting the craft of bespoke womenswear. From timeless South Indian silk saree blouses to contemporary festive kurtis, our studio blends heritage needlework with modern silhouette design.
+                Located in Hope College, Peelamedu, CMS Fashions Designer has spent nearly a decade perfecting the craft of bespoke womenswear. From timeless South Indian silk saree blouses to contemporary festive kurtis, our studio blends heritage needlework with modern silhouette design.
               </p>
             </div>
           </div>
@@ -1435,7 +1435,7 @@ export default function App() {
                   </div>
 
                   <a
-                    href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I am looking for bridal blouse stitching and Aari embroidery. Please let me know how to book an appointment.')}`}
+                    href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I am looking for bridal blouse stitching and Aari embroidery. Please let me know how to book an appointment.')}`}
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-gold"
@@ -1709,7 +1709,7 @@ export default function App() {
 
             <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
               <a
-                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I would like to view your latest bridal and blouse design catalog.')}`}
+                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to view your latest bridal and blouse design catalog.')}`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-outline"
@@ -1773,7 +1773,7 @@ export default function App() {
                 <em>Near Hopes &amp; Peelamedu</em>
               </h2>
               <p className="section-desc">
-                CMS Fashion Designer is the #1 destination when searching for <strong>ladies tailors near Hopes</strong>, exclusive <strong>designer shop near Hopes</strong>, express <strong>blouse stitching (blowes stiching) near Hopes</strong>, bespoke <strong>Aari work designer shop near Hopes</strong>, or <strong>saree pre pleating shop near Hopes</strong>. Located right on Masakalipalayam Road near Hope College, Peelamedu.
+                CMS Fashions Designer is the #1 destination when searching for <strong>ladies tailors near Hopes</strong>, exclusive <strong>designer shop near Hopes</strong>, express <strong>blouse stitching (blowes stiching) near Hopes</strong>, bespoke <strong>Aari work designer shop near Hopes</strong>, or <strong>saree pre pleating shop near Hopes</strong>. Located right on Masakalipalayam Road near Hope College, Peelamedu.
               </p>
             </div>
 
@@ -2105,7 +2105,7 @@ export default function App() {
       <footer className="site-footer">
         <div className="container-max">
           <div className="footer-top">
-            <a href="#top" className="brand-link" aria-label="CMS Fashion Designer Home">
+            <a href="#top" className="brand-link" aria-label="CMS Fashions Designer Home">
               <div className="brand-crest">
                 <img src="/cms-logo.jpg" alt="CMS Logo" />
               </div>
@@ -2133,7 +2133,7 @@ export default function App() {
                 <Instagram size={18} /> Instagram
               </a>
               <a
-                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer!')}`}
+                href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer!')}`}
                 target="_blank"
                 rel="noreferrer"
                 className="footer-social-link"
@@ -2164,7 +2164,7 @@ export default function App() {
           </div>
 
           <div className="footer-bottom">
-            <span>© 2022 CMS Fashion Designer. All Rights Reserved. Peelamedu, Coimbatore.</span>
+            <span>© 2022 CMS Fashions Designer. All Rights Reserved. Peelamedu, Coimbatore.</span>
             <span style={{ fontStyle: 'italic', color: 'var(--gold-bright)', fontSize: '0.95rem' }}>
               Your Style, Our Passion.
             </span>
@@ -2174,7 +2174,7 @@ export default function App() {
 
       {/* Floating WhatsApp Action Button */}
       <a
-        href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashion Designer, I would like to inquire about tailoring and bridal design.')}`}
+        href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to inquire about tailoring and bridal design.')}`}
         target="_blank"
         rel="noreferrer"
         className="floating-whatsapp-btn"
