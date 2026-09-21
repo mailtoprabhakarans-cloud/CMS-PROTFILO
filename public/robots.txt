@@ -1,5 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
-# Robots.txt for CMS Fashion Designer - Best Fashion Design Near Hopes College & Peelamedu, Coimbatore
+# Robots.txt for CMS Fashions Designer - Best Fashion Design Near Hopes College & Peelamedu, Coimbatore
 
 User-agent: *
 Allow: /

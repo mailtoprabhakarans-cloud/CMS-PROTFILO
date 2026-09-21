@@ -562,6 +562,7 @@ const localFaqData = [
 const WHATSAPP_PHONE = '919976963056';
 const WHATSAPP_BASE = `https://wa.me/${WHATSAPP_PHONE}`;
 const STUDIO_EMAIL = 'cmsfashiondesigner@gmail.com';
+const INSTAGRAM_URL = 'https://www.instagram.com/cms_fashion_designer?stkn=MTQyaGdtdTN5MHV1dQ%3D%3D';
 
 interface ServiceCardProps {
   service: ServiceItem;
@@ -878,7 +879,7 @@ export default function App() {
               </div>
               <div className="brand-text">
                 <span className="brand-title">CMS</span>
-                <span className="brand-tagline">Fashion Designer</span>
+                <span className="brand-tagline">Fashions Designer</span>
               </div>
             </a>
 
@@ -1707,7 +1708,7 @@ export default function App() {
               ))}
             </div>
 
-            <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
+            <div style={{ textAlign: 'center', marginTop: '3.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
                 href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to view your latest bridal and blouse design catalog.')}`}
                 target="_blank"
@@ -1716,6 +1717,16 @@ export default function App() {
               >
                 <span>Request Latest Design Catalog on WhatsApp</span>
                 <ArrowUpRight size={16} />
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-gold"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+              >
+                <Instagram size={17} />
+                <span>See Real Works on Instagram (@cms_fashion_designer)</span>
               </a>
             </div>
           </div>
@@ -1997,6 +2008,25 @@ export default function App() {
 
                   <div className="contact-info-entry">
                     <div className="contact-info-icon">
+                      <Instagram size={22} />
+                    </div>
+                    <div className="contact-info-text">
+                      <h5>Follow on Instagram</h5>
+                      <p>
+                        <a
+                          href={INSTAGRAM_URL}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{ color: 'var(--gold-bright)', fontWeight: 600 }}
+                        >
+                          @cms_fashion_designer
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="contact-info-entry">
+                    <div className="contact-info-icon">
                       <Clock3 size={22} />
                     </div>
                     <div className="contact-info-text">
@@ -2107,11 +2137,11 @@ export default function App() {
           <div className="footer-top">
             <a href="#top" className="brand-link" aria-label="CMS Fashions Designer Home">
               <div className="brand-crest">
-                <img src="/cms-logo.jpg" alt="CMS Logo" />
+                <img src="/cms-logo.jpg" alt="CMS Fashions Designer Logo" />
               </div>
               <div className="brand-text">
                 <span className="brand-title">CMS</span>
-                <span className="brand-tagline">Fashion Designer</span>
+                <span className="brand-tagline">Fashions Designer</span>
               </div>
             </a>
 
@@ -2124,13 +2154,13 @@ export default function App() {
                 <Mail size={18} /> {STUDIO_EMAIL}
               </a>
               <a
-                href="https://instagram.com"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="footer-social-link"
                 style={{ color: 'var(--gold-light)' }}
               >
-                <Instagram size={18} /> Instagram
+                <Instagram size={18} /> @cms_fashion_designer
               </a>
               <a
                 href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer!')}`}
