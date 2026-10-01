@@ -2,6 +2,8 @@ import { useState } from 'react';
 import {
   ArrowRight,
   ArrowUpRight,
+  Award,
+  BookOpen,
   CheckCircle2,
   ChevronDown,
   ChevronLeft,
@@ -9,6 +11,7 @@ import {
   ChevronUp,
   Clock3,
   Crown,
+  GraduationCap,
   Images,
   Instagram,
   Mail,
@@ -21,6 +24,7 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
+  Users,
   X,
   Zap,
 } from 'lucide-react';
@@ -72,10 +76,10 @@ const servicesData: ServiceItem[] = [
     id: 'saree-pleating',
     category: 'saree',
     number: '03',
-    badge: '23+ Draping Styles',
+    badge: '23+ Draping Styles & Coaching',
     title: 'Saree Pre-Pleating & Draping',
-    description: 'Master studio for 23+ pre-pleating & couture draping styles. Turn any Kanchipuram silk, net, or georgette into an effortless 60-second ready drape.',
-    highlights: ['23+ Draping Styles', 'Box & Hanger Folding', 'Madisar & Kerala Draping', 'Mermaid & Cancan Draping', 'Two Saree & Net Draping', 'Heatless & Straightener Set'],
+    description: 'Master studio for 23+ pre-pleating & couture draping styles, plus certified professional coaching classes. Turn any Kanchipuram silk, net, or georgette into an effortless 60-second ready drape.',
+    highlights: ['Coaching Classes (+91 99769 63056)', '23+ Draping Styles', 'Box & Hanger Folding', 'Madisar & Kerala Draping', 'Mermaid & Cancan Draping', 'Heatless & Straightener Set'],
     image: '/images/service-saree-box1.jpg',
     images: [
       '/images/service-saree-box1.jpg',
@@ -554,6 +558,10 @@ const localFaqData = [
     a: 'We are situated just 2 minutes (approx. 400 meters) from Hope College Bus Stop along Masakalipalayam Road in Peelamedu, Coimbatore (PIN: 641004). Our atelier is exceptionally easy to reach from Avinashi Road, Singanallur, Fun Republic Mall, and Peelamedu Railway Station.',
   },
   {
+    q: 'Do you offer Saree Draping & Pre-Pleating coaching classes near Hopes?',
+    a: 'Yes! CMS Fashions Designer provides professional, hands-on Saree Draping & Pre-Pleating coaching classes near Hope College, Peelamedu, Coimbatore. You will learn all 23+ draping styles, 60-second box folding, steam press, heatless pleating, and bridal model draping. For coaching class admissions, syllabus, and next batch timings, please call or WhatsApp us at +91 99769 63056.',
+  },
+  {
     q: 'Can I walk in on Sundays or book an appointment near Hope College?',
     a: 'Yes, we are open all 7 days of the week from 7:00 AM to 10:00 PM (Monday through Sunday). Walk-ins are always warmly welcomed, or you can message us directly on WhatsApp at +91 99769 63056 to book your priority consultation slot.',
   },
@@ -676,11 +684,18 @@ function ServiceCard({ service, onOpenLightbox, whatsAppLink }: ServiceCardProps
           ))}
         </div>
         {service.id === 'saree-pleating' && (
-          <a href="#saree-styles" className="service-saree-action-pill">
-            <Sparkles size={13} />
-            <span>Explore All 23 Draping Styles</span>
-            <ArrowRight size={13} />
-          </a>
+          <div className="service-saree-actions">
+            <a href="#saree-styles" className="service-saree-action-pill">
+              <Sparkles size={13} />
+              <span>Explore 23 Draping Styles</span>
+              <ArrowRight size={13} />
+            </a>
+            <a href="#coaching-class" className="service-saree-action-pill coaching-pill">
+              <GraduationCap size={13} />
+              <span>Coaching Class (+91 99769 63056)</span>
+              <ArrowRight size={13} />
+            </a>
+          </div>
         )}
       </div>
 
@@ -716,6 +731,7 @@ const heroShowcaseImages = [
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [selectedBlouseStyle, setSelectedBlouseStyle] = useState<BlouseStyle>(blouseStyles[0]);
   const [heroImgIdx, setHeroImgIdx] = useState(0);
@@ -885,18 +901,94 @@ export default function App() {
 
             <nav className="nav-menu" aria-label="Main Navigation">
               <a href="#studio" className="nav-link">The Studio</a>
-              <a href="#blouses" className="nav-link">Blouse Styles</a>
+              <a href="#blouses" className="nav-link">Blouses</a>
               <a href="#services" className="nav-link">Services</a>
-              <a href="#saree-styles" className="nav-link">Saree Draping</a>
-              <a href="#craftsmanship" className="nav-link">Craftsmanship</a>
-              <a href="#local-spotlight" className="nav-link">Near Hopes</a>
+              <a href="#saree-styles" className="nav-link nav-link-featured">
+                <Sparkles size={12} className="nav-link-sparkle" />
+                <span>Saree Draping &amp; Pre-Pleating</span>
+                <span className="nav-link-badge">Classes</span>
+              </a>
               <a href="#portfolio" className="nav-link">Lookbook</a>
-              <a href="#testimonials" className="nav-link">Reviews</a>
-              <a href="#faq" className="nav-link">FAQ</a>
+              <a href="#local-spotlight" className="nav-link">Near Hopes</a>
               <a href="#contact" className="nav-link">Location</a>
+
+              {/* Luxury Secondary Dropdown */}
+              <div
+                className="nav-dropdown-wrap"
+                onMouseEnter={() => setMoreDropdownOpen(true)}
+                onMouseLeave={() => setMoreDropdownOpen(false)}
+              >
+                <button
+                  type="button"
+                  className="nav-link nav-dropdown-btn"
+                  onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
+                  aria-expanded={moreDropdownOpen}
+                >
+                  <span>Explore More</span>
+                  <ChevronDown size={13} className={`nav-chevron ${moreDropdownOpen ? 'rotated' : ''}`} />
+                </button>
+
+                {moreDropdownOpen && (
+                  <div className="nav-dropdown-menu">
+                    <a
+                      href="#coaching-class"
+                      onClick={() => setMoreDropdownOpen(false)}
+                      className="nav-dropdown-item dropdown-highlight"
+                    >
+                      <GraduationCap size={16} />
+                      <div>
+                        <strong>Coaching Classes</strong>
+                        <span>Saree draping practical training</span>
+                      </div>
+                    </a>
+                    <a
+                      href="#craftsmanship"
+                      onClick={() => setMoreDropdownOpen(false)}
+                      className="nav-dropdown-item"
+                    >
+                      <Crown size={15} />
+                      <div>
+                        <strong>The Craftsmanship</strong>
+                        <span>Our 4-step tailoring journey</span>
+                      </div>
+                    </a>
+                    <a
+                      href="#testimonials"
+                      onClick={() => setMoreDropdownOpen(false)}
+                      className="nav-dropdown-item"
+                    >
+                      <Star size={15} />
+                      <div>
+                        <strong>Client Reviews</strong>
+                        <span>5.0 rating from 300+ brides</span>
+                      </div>
+                    </a>
+                    <a
+                      href="#faq"
+                      onClick={() => setMoreDropdownOpen(false)}
+                      className="nav-dropdown-item"
+                    >
+                      <CheckCircle2 size={15} />
+                      <div>
+                        <strong>Studio FAQ</strong>
+                        <span>Common questions &amp; turnaround</span>
+                      </div>
+                    </a>
+                  </div>
+                )}
+              </div>
             </nav>
 
             <div className="nav-actions">
+              <a
+                href="tel:+919976963056"
+                className="btn btn-outline nav-quick-call"
+                aria-label="Call CMS Fashions Designer"
+              >
+                <Phone size={13} />
+                <span>+91 99769 63056</span>
+              </a>
+
               <a
                 href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to book an appointment.')}`}
                 target="_blank"
@@ -937,30 +1029,34 @@ export default function App() {
               </a>
               <a href="#saree-styles" onClick={closeMenu} className="mobile-nav-item">
                 <span className="mobile-nav-num">04</span>
-                <span>Saree Draping (23 Styles)</span>
+                <span>Saree Draping &amp; Pre-Pleating (23 Styles)</span>
+              </a>
+              <a href="#coaching-class" onClick={closeMenu} className="mobile-nav-item mobile-nav-coaching">
+                <span className="mobile-nav-num">05</span>
+                <span>🎓 Coaching Class Admissions (+91 99769 63056)</span>
               </a>
               <a href="#craftsmanship" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">05</span>
+                <span className="mobile-nav-num">06</span>
                 <span>The CMS Craftsmanship</span>
               </a>
               <a href="#local-spotlight" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">06</span>
+                <span className="mobile-nav-num">07</span>
                 <span>Best Design Near Hopes</span>
               </a>
               <a href="#portfolio" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">07</span>
+                <span className="mobile-nav-num">08</span>
                 <span>Selected Lookbook</span>
               </a>
               <a href="#testimonials" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">08</span>
+                <span className="mobile-nav-num">09</span>
                 <span>Client Reviews</span>
               </a>
               <a href="#faq" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">09</span>
+                <span className="mobile-nav-num">10</span>
                 <span>Local FAQ</span>
               </a>
               <a href="#contact" onClick={closeMenu} className="mobile-nav-item">
-                <span className="mobile-nav-num">10</span>
+                <span className="mobile-nav-num">11</span>
                 <span>Studio Location &amp; Contact</span>
               </a>
             </div>
@@ -1041,6 +1137,9 @@ export default function App() {
                     <a href="#blouses" className="hero-search-pill">Blouse Stitching (Blowes Stiching)</a>
                     <a href="#services" className="hero-search-pill">Aari Work Designer Shop</a>
                     <a href="#saree-styles" className="hero-search-pill">Saree Pre Pleating Near Hopes</a>
+                    <a href="#coaching-class" className="hero-search-pill hero-search-pill-highlight">
+                      🎓 Saree Draping Coaching Class
+                    </a>
                   </div>
                 </div>
 
@@ -1625,6 +1724,138 @@ export default function App() {
                 </div>
               </div>
             </div>
+
+            {/* Saree Draping & Pre-Pleating Coaching Class Academy Banner */}
+            <div id="coaching-class" className="coaching-banner">
+              <div className="coaching-grid">
+                <div className="coaching-copy">
+                  <div className="coaching-eyebrow">
+                    <GraduationCap size={16} />
+                    <span>Certified Coaching Class · Hands-on Practical Training</span>
+                  </div>
+
+                  <h3 className="coaching-title">
+                    Saree Draping & Pre-Pleating <br />
+                    <em>Coaching Classes in Coimbatore.</em>
+                  </h3>
+
+                  <p className="coaching-desc">
+                    Master the high-demand craft of professional saree draping and 60-second ready pre-pleating. Whether you want to launch your own bridal boutique, become a freelance saree drapist, or level up your salon services, CMS Fashions Designer provides 1-on-1 practical training near Hope College, Peelamedu.
+                  </p>
+
+                  <div className="coaching-features-grid">
+                    <div className="coaching-feature-item">
+                      <div className="coaching-feature-icon">
+                        <Sparkles size={16} />
+                      </div>
+                      <div>
+                        <strong>All 23+ Draping Styles</strong>
+                        <span>Madisar (Tamil Iyer/Iyengar), Kerala, Mermaid, Cancan, Double Saree & Fusion</span>
+                      </div>
+                    </div>
+
+                    <div className="coaching-feature-item">
+                      <div className="coaching-feature-icon">
+                        <Zap size={16} />
+                      </div>
+                      <div>
+                        <strong>60-Second Ready Box Folding</strong>
+                        <span>Folding board methods, hanger anchoring & wrinkle-safe travel packaging</span>
+                      </div>
+                    </div>
+
+                    <div className="coaching-feature-item">
+                      <div className="coaching-feature-icon">
+                        <ShieldCheck size={16} />
+                      </div>
+                      <div>
+                        <strong>Zari-Safe Fabric Care</strong>
+                        <span>Steam iron mastery & 100% heatless pleating for pure Kanchipuram silk</span>
+                      </div>
+                    </div>
+
+                    <div className="coaching-feature-item">
+                      <div className="coaching-feature-icon">
+                        <Crown size={16} />
+                      </div>
+                      <div>
+                        <strong>Live Bridal & Client Draping</strong>
+                        <span>Real model & mannequin practice, zero-slip safety pin techniques & height adjustment</span>
+                      </div>
+                    </div>
+
+                    <div className="coaching-feature-item">
+                      <div className="coaching-feature-icon">
+                        <Users size={16} />
+                      </div>
+                      <div>
+                        <strong>1-on-1 Personalized Coaching</strong>
+                        <span>Flexible batch timings with intensive individual attention and doubt-clearing</span>
+                      </div>
+                    </div>
+
+                    <div className="coaching-feature-item">
+                      <div className="coaching-feature-icon">
+                        <Award size={16} />
+                      </div>
+                      <div>
+                        <strong>Business & Studio Guidance</strong>
+                        <span>Pricing packages, attracting bridal clients & establishing your own brand</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Prominent Contact Box */}
+                  <div className="coaching-contact-box">
+                    <div className="coaching-contact-info">
+                      <span className="coaching-contact-label">For Coaching Class Admissions, Batch Timings & Fees:</span>
+                      <div className="coaching-phone-row">
+                        <Phone size={18} />
+                        <a href="tel:+919976963056" className="coaching-phone-link">+91 99769 63056</a>
+                      </div>
+                    </div>
+
+                    <div className="coaching-cta-actions">
+                      <a
+                        href="tel:+919976963056"
+                        className="btn btn-gold coaching-cta-btn"
+                      >
+                        <Phone size={15} />
+                        <span>Call +91 99769 63056</span>
+                      </a>
+
+                      <a
+                        href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I am interested in joining your Saree Draping & Pre-Pleating Coaching Class. Please share the course details, fees, and next batch timings.')}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-outline-gold coaching-cta-btn"
+                      >
+                        <MessageCircle size={15} />
+                        <span>WhatsApp for Class Details</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="coaching-visual">
+                  <div className="coaching-card-frame">
+                    <img
+                      src="/images/service-saree-box2.jpg"
+                      alt="CMS Fashions Saree Draping and Pre-Pleating Coaching Class"
+                      className="coaching-img"
+                    />
+                    <div className="coaching-badge-float top">
+                      <GraduationCap size={15} />
+                      <span>Certified Hands-On Training</span>
+                    </div>
+                    <div className="coaching-badge-float bottom">
+                      <Sparkles size={14} />
+                      <span>Admissions Open · Contact +91 99769 63056</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1784,7 +2015,7 @@ export default function App() {
                 <em>Near Hopes &amp; Peelamedu</em>
               </h2>
               <p className="section-desc">
-                CMS Fashions Designer is the #1 destination when searching for <strong>ladies tailors near Hopes</strong>, exclusive <strong>designer shop near Hopes</strong>, express <strong>blouse stitching (blowes stiching) near Hopes</strong>, bespoke <strong>Aari work designer shop near Hopes</strong>, or <strong>saree pre pleating shop near Hopes</strong>. Located right on Masakalipalayam Road near Hope College, Peelamedu.
+                CMS Fashions Designer is the #1 destination when searching for <strong>ladies tailors near Hopes</strong>, exclusive <strong>designer shop near Hopes</strong>, express <strong>blouse stitching (blowes stiching) near Hopes</strong>, bespoke <strong>Aari work designer shop near Hopes</strong>, premier <strong>saree pre pleating shop near Hopes</strong>, or certified <strong>saree draping &amp; pre-pleating coaching classes near Hopes</strong>. Located right on Masakalipalayam Road near Hope College, Peelamedu.
               </p>
             </div>
 
@@ -1844,6 +2075,24 @@ export default function App() {
                 </p>
               </div>
 
+              <div className="local-card local-card-coaching">
+                <div className="local-card-icon-wrap coaching-icon-wrap">
+                  <GraduationCap size={24} />
+                </div>
+                <span className="local-card-badge coaching-badge">Certified Coaching · Hands-on</span>
+                <h3 className="local-card-title">Saree Draping &amp; Pre-Pleating Coaching Classes</h3>
+                <p className="local-card-desc">
+                  Professional hands-on coaching near Hope College. Master all 23+ draping styles, 60-second box folding, steam &amp; heatless pleating, and bridal client styling. For coaching class contact: <a href="tel:+919976963056" style={{ color: 'var(--gold-bright)', fontWeight: 700 }}>+91 99769 63056</a>.
+                </p>
+                <div style={{ marginTop: '0.85rem' }}>
+                  <a href="#coaching-class" className="service-saree-action-pill coaching-pill" style={{ margin: 0 }}>
+                    <GraduationCap size={13} />
+                    <span>View Syllabus &amp; Enroll</span>
+                    <ArrowRight size={13} />
+                  </a>
+                </div>
+              </div>
+
               <div className="local-card">
                 <div className="local-card-icon-wrap">
                   <MapPin size={24} />
@@ -1852,6 +2101,17 @@ export default function App() {
                 <h3 className="local-card-title">Convenient Location &amp; Sunday Open</h3>
                 <p className="local-card-desc">
                   Situated at Velappan Nagar on Masakalipalayam Road, Peelamedu. Open 7 days a week (7 AM to 10 PM) including Sundays. Easy street parking and instant WhatsApp booking.
+                </p>
+              </div>
+
+              <div className="local-card">
+                <div className="local-card-icon-wrap">
+                  <Phone size={24} />
+                </div>
+                <span className="local-card-badge">Direct Studio Helpline</span>
+                <h3 className="local-card-title">Priority Consultation &amp; Admissions</h3>
+                <p className="local-card-desc">
+                  Direct WhatsApp &amp; phone line for bridal blouse bookings, urgent alterations, or coaching class admissions. Call or WhatsApp our designers anytime at <a href="tel:+919976963056" style={{ color: 'var(--gold-bright)', fontWeight: 700 }}>+91 99769 63056</a>.
                 </p>
               </div>
             </div>
@@ -1988,6 +2248,23 @@ export default function App() {
                       <h5>Direct Phone & WhatsApp</h5>
                       <p>
                         <a href="tel:+919976963056">+91 99769 63056</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="contact-info-entry coaching-contact-entry">
+                    <div className="contact-info-icon">
+                      <GraduationCap size={22} />
+                    </div>
+                    <div className="contact-info-text">
+                      <h5>Saree Draping Coaching Class</h5>
+                      <p>
+                        Coaching class admissions &amp; batch schedule inquiry:
+                      </p>
+                      <p style={{ marginTop: '3px' }}>
+                        <a href="tel:+919976963056" style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
+                          Call / WhatsApp: +91 99769 63056
+                        </a>
                       </p>
                     </div>
                   </div>

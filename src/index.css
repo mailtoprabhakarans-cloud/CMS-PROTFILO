@@ -57,7 +57,7 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -282,29 +282,33 @@ button {
 .nav-menu {
   display: none;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.15rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1160px) {
   .nav-menu {
     display: flex;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1360px) {
   .nav-menu {
-    gap: 1.85rem;
+    gap: 1.45rem;
   }
 }
 
 .nav-link {
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.025em;
   color: #cbd5e1;
   position: relative;
   padding: 6px 2px;
   transition: color 0.25s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .nav-link:hover {
@@ -328,18 +332,185 @@ button {
   width: 100%;
 }
 
+/* Featured Saree Draping & Pre-Pleating Nav Pill */
+.nav-link.nav-link-featured {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.16) 0%, rgba(212, 175, 55, 0.06) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  color: var(--gold-bright);
+  font-weight: 600;
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.15);
+  transition: all 0.25s ease;
+}
+
+.nav-link.nav-link-featured:after {
+  display: none;
+}
+
+.nav-link.nav-link-featured:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.14) 100%);
+  border-color: var(--gold-light);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
+}
+
+.nav-link-sparkle {
+  color: var(--gold-bright);
+  flex-shrink: 0;
+}
+
+.nav-link-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  background: var(--gold-bright);
+  color: #060a12;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-left: 2px;
+}
+
+/* Secondary Dropdown in Navbar */
+.nav-dropdown-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+.nav-chevron {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--gold-light);
+}
+
+.nav-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 250px;
+  background: rgba(8, 14, 26, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--gold-border-bright);
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(212, 175, 55, 0.15);
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 1010;
+  animation: navDropdownFade 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes navDropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-sub);
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown-item svg {
+  color: var(--gold-bright);
+  flex-shrink: 0;
+}
+
+.nav-dropdown-item strong {
+  display: block;
+  font-size: 0.83rem;
+  color: var(--cream);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.nav-dropdown-item span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin-top: 1px;
+}
+
+.nav-dropdown-item:hover {
+  background: rgba(212, 175, 55, 0.12);
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.nav-dropdown-item:hover strong {
+  color: var(--gold-bright);
+}
+
+.nav-dropdown-item.dropdown-highlight {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.nav-dropdown-item.dropdown-highlight:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-light);
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
-/* Single Navbar CTA Button (Desktop Only) */
+/* Quick Call Button on Header */
+.nav-quick-call {
+  display: none;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.78rem;
+  color: var(--gold-bright);
+  border-color: rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.nav-quick-call:hover {
+  background: rgba(212, 175, 55, 0.2);
+  color: #ffffff;
+  border-color: var(--gold-bright);
+}
+
+@media (min-width: 600px) {
+  .nav-quick-call {
+    display: inline-flex;
+  }
+}
+
+/* Navbar CTA Button */
 .nav-cta {
   display: none !important;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .nav-cta {
     display: inline-flex !important;
     padding: 0.52rem 1.25rem;
@@ -352,26 +523,40 @@ button {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--gold-border);
-  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: var(--gold-bright);
   transition: all 0.2s ease;
   flex-shrink: 0;
 }
 
 .mobile-toggle:hover, .mobile-toggle:active {
-  background: rgba(212, 175, 55, 0.15);
+  background: rgba(212, 175, 55, 0.22);
   border-color: var(--gold-primary);
-  color: #fff;
+  color: #ffffff;
+  transform: scale(1.04);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1160px) {
   .mobile-toggle {
     display: none !important;
   }
+}
+
+/* Mobile Navigation Coaching Highlight */
+.mobile-nav-coaching {
+  background: rgba(212, 175, 55, 0.12) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--gold-bright) !important;
+  font-weight: 600 !important;
+}
+
+.mobile-nav-coaching .mobile-nav-num {
+  color: #ffffff !important;
 }
 
 /* Luxury Buttons */
@@ -668,6 +853,21 @@ button {
   color: var(--gold-bright);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+}
+
+.hero-search-pill-highlight {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+  border-color: rgba(212, 175, 55, 0.55);
+  color: var(--gold-bright);
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+}
+
+.hero-search-pill-highlight:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.35) 0%, rgba(212, 175, 55, 0.2) 100%);
+  border-color: var(--gold-light);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.35);
 }
 
 .hero-stats {
@@ -2809,11 +3009,17 @@ button {
    Saree Pre-Pleating & 23 Specialty Draping Styles Showcase
    ========================================================================== */
 
+.service-saree-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
 .service-saree-action-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.85rem;
   padding: 0.45rem 0.85rem;
   font-size: 0.78rem;
   font-weight: 600;
@@ -2831,6 +3037,18 @@ button {
   border-color: var(--gold-light);
   transform: translateX(3px);
   color: #ffffff;
+}
+
+.service-saree-action-pill.coaching-pill {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0.08) 100%);
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #ffffff;
+}
+
+.service-saree-action-pill.coaching-pill:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.32) 0%, rgba(212, 175, 55, 0.16) 100%);
+  border-color: var(--gold-bright);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
 }
 
 .saree-styles-section {
@@ -3203,6 +3421,282 @@ button {
   line-height: 1.5;
 }
 
+/* ==========================================================================
+   Saree Draping & Pre-Pleating Coaching Class Academy Showcase
+   ========================================================================== */
+
+.coaching-banner {
+  background: linear-gradient(135deg, rgba(13, 22, 38, 0.96) 0%, rgba(24, 18, 28, 0.96) 50%, rgba(10, 16, 28, 0.98) 100%);
+  border: 1px solid var(--gold-border-bright);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.4rem;
+  margin-top: 3.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 215, 0, 0.2);
+}
+
+.coaching-banner::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .coaching-banner {
+    padding: 3.25rem 2.75rem;
+  }
+}
+
+.coaching-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .coaching-grid {
+    grid-template-columns: 1.28fr 0.72fr;
+    gap: 3.5rem;
+  }
+}
+
+.coaching-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+.coaching-title {
+  font-family: var(--font-cinzel);
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  color: var(--cream);
+  line-height: 1.22;
+  margin-bottom: 1rem;
+}
+
+.coaching-title em {
+  font-family: var(--font-playfair);
+  font-style: italic;
+  background: linear-gradient(135deg, #ffffff 10%, var(--gold-bright) 60%, var(--gold-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coaching-desc {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.coaching-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  .coaching-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.coaching-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.coaching-feature-item:hover {
+  background: rgba(212, 175, 55, 0.06);
+  border-color: rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+.coaching-feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.coaching-feature-item strong {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--cream);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.coaching-feature-item span {
+  display: block;
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.coaching-contact-box {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.04) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+@media (min-width: 768px) {
+  .coaching-contact-box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.coaching-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.coaching-contact-label {
+  font-size: 0.77rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.coaching-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold-bright);
+}
+
+.coaching-phone-link {
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-family: var(--font-cinzel);
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: var(--transition);
+}
+
+.coaching-phone-link:hover {
+  color: var(--gold-bright);
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.coaching-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.coaching-cta-btn {
+  font-size: 0.82rem;
+  padding: 0.62rem 1.15rem;
+}
+
+.coaching-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.coaching-card-frame {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--gold-border-bright);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  background: var(--bg-card);
+}
+
+.coaching-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.coaching-card-frame:hover .coaching-img {
+  transform: scale(1.04);
+}
+
+.coaching-badge-float {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.coaching-badge-float.top {
+  top: 16px;
+  left: 16px;
+  background: rgba(10, 16, 28, 0.88);
+  border: 1px solid var(--gold-border-bright);
+  color: var(--gold-bright);
+}
+
+.coaching-badge-float.bottom {
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  justify-content: center;
+  background: rgba(16, 26, 44, 0.92);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #ffffff;
+}
+
+.coaching-contact-entry {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+}
+
 /* ============================================================
    TOP SEO ANNOUNCEMENT STRIP
    ============================================================ */
@@ -3274,9 +3768,21 @@ button {
 
 .local-spotlight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-top: 2.5rem;
+}
+
+@media (min-width: 680px) {
+  .local-spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .local-spotlight-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .local-card {
@@ -3289,6 +3795,29 @@ button {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+}
+
+.local-card-coaching {
+  background: linear-gradient(135deg, rgba(16, 28, 48, 0.95) 0%, rgba(32, 22, 38, 0.95) 100%);
+  border: 1px solid var(--gold-border-bright);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.local-card-coaching:hover {
+  border-color: var(--gold-bright);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6), 0 0 24px rgba(212, 175, 55, 0.25);
+}
+
+.coaching-icon-wrap {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.1) 100%) !important;
+  border-color: var(--gold-bright) !important;
+  color: var(--gold-bright) !important;
+}
+
+.coaching-badge {
+  background: rgba(212, 175, 55, 0.22) !important;
+  color: var(--gold-bright) !important;
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
 }
 
 .local-card:hover {
