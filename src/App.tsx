@@ -910,7 +910,6 @@ export default function App() {
               </a>
               <a href="#portfolio" className="nav-link">Lookbook</a>
               <a href="#local-spotlight" className="nav-link">Near Hopes</a>
-              <a href="#contact" className="nav-link">Location</a>
 
               {/* Luxury Secondary Dropdown */}
               <div
@@ -924,7 +923,7 @@ export default function App() {
                   onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
                   aria-expanded={moreDropdownOpen}
                 >
-                  <span>Explore More</span>
+                  <span>More</span>
                   <ChevronDown size={13} className={`nav-chevron ${moreDropdownOpen ? 'rotated' : ''}`} />
                 </button>
 
@@ -939,6 +938,17 @@ export default function App() {
                       <div>
                         <strong>Coaching Classes</strong>
                         <span>Saree draping practical training</span>
+                      </div>
+                    </a>
+                    <a
+                      href="#contact"
+                      onClick={() => setMoreDropdownOpen(false)}
+                      className="nav-dropdown-item"
+                    >
+                      <MapPin size={15} />
+                      <div>
+                        <strong>Location &amp; Hours</strong>
+                        <span>Masakalipalayam Rd, near Hope College</span>
                       </div>
                     </a>
                     <a
@@ -980,15 +990,6 @@ export default function App() {
             </nav>
 
             <div className="nav-actions">
-              <a
-                href="tel:+919976963056"
-                className="btn btn-outline nav-quick-call"
-                aria-label="Call CMS Fashions Designer"
-              >
-                <Phone size={13} />
-                <span>+91 99769 63056</span>
-              </a>
-
               <a
                 href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer, I would like to book an appointment.')}`}
                 target="_blank"

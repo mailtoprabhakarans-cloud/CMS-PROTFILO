@@ -187,20 +187,34 @@ button {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: rgba(6, 10, 18, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--gold-border);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  background: rgba(6, 10, 18, 0.95);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65);
   transition: var(--transition);
+  width: 100%;
+}
+
+.site-header .container-max {
+  max-width: 1440px;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .site-header .container-max {
+    padding: 0 1.75rem;
+  }
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 66px;
+  width: 100%;
+  gap: 1.25rem;
 }
 
 @media (min-width: 1024px) {
@@ -282,26 +296,26 @@ button {
 .nav-menu {
   display: none;
   align-items: center;
-  gap: 1.15rem;
+  gap: 1.35rem;
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1080px) {
   .nav-menu {
     display: flex;
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1320px) {
   .nav-menu {
-    gap: 1.45rem;
+    gap: 1.75rem;
   }
 }
 
 .nav-link {
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 500;
-  letter-spacing: 0.025em;
-  color: #cbd5e1;
+  letter-spacing: 0.02em;
+  color: #d1d5db;
   position: relative;
   padding: 6px 2px;
   transition: color 0.25s ease;
@@ -481,36 +495,17 @@ button {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-
-/* Quick Call Button on Header */
-.nav-quick-call {
-  display: none;
-  padding: 0.45rem 0.95rem;
-  font-size: 0.78rem;
-  color: var(--gold-bright);
-  border-color: rgba(212, 175, 55, 0.4);
-  background: rgba(212, 175, 55, 0.08);
-}
-
-.nav-quick-call:hover {
-  background: rgba(212, 175, 55, 0.2);
-  color: #ffffff;
-  border-color: var(--gold-bright);
-}
-
-@media (min-width: 600px) {
-  .nav-quick-call {
-    display: inline-flex;
-  }
+  flex-shrink: 0;
 }
 
 /* Navbar CTA Button */
 .nav-cta {
   display: none !important;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .nav-cta {
     display: inline-flex !important;
     padding: 0.52rem 1.25rem;
@@ -540,7 +535,7 @@ button {
   transform: scale(1.04);
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1080px) {
   .mobile-toggle {
     display: none !important;
   }
