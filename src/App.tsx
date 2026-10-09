@@ -716,8 +716,8 @@ function ServiceCard({ service, onOpenLightbox, whatsAppLink }: ServiceCardProps
 
 const heroShowcaseImages = [
   {
-    src: '/images/service-blouse-2.jpg',
-    alt: 'Bespoke Emerald Green Sweetheart Bridal Blouse in Atelier',
+    src: '/images/cms-hero-banner.jpg',
+    alt: 'CMS Fashions Designer - Saree Pre-Pleating, Draping & Bridal Aari Work',
   },
   {
     src: '/images/service-aari.jpg',
@@ -903,6 +903,15 @@ export default function App() {
               <a href="#studio" className="nav-link">The Studio</a>
               <a href="#blouses" className="nav-link">Blouses</a>
               <a href="#services" className="nav-link">Services</a>
+              <a
+                href="#services"
+                onClick={() => setActiveCategory('aari')}
+                className="nav-link nav-link-featured"
+              >
+                <Sparkles size={12} className="nav-link-sparkle" />
+                <span>Aari Work &amp; Embroidery</span>
+                <span className="nav-link-badge">Bridal</span>
+              </a>
               <a href="#saree-styles" className="nav-link nav-link-featured">
                 <Sparkles size={12} className="nav-link-sparkle" />
                 <span>Saree Draping &amp; Pre-Pleating</span>
@@ -1028,8 +1037,19 @@ export default function App() {
                 <span className="mobile-nav-num">03</span>
                 <span>All Tailoring Services</span>
               </a>
-              <a href="#saree-styles" onClick={closeMenu} className="mobile-nav-item">
+              <a
+                href="#services"
+                onClick={() => {
+                  setActiveCategory('aari');
+                  closeMenu();
+                }}
+                className="mobile-nav-item"
+              >
                 <span className="mobile-nav-num">04</span>
+                <span>Aari Work &amp; Embroidery (Bridal Handwork)</span>
+              </a>
+              <a href="#saree-styles" onClick={closeMenu} className="mobile-nav-item">
+                <span className="mobile-nav-num">05</span>
                 <span>Saree Draping &amp; Pre-Pleating (23 Styles)</span>
               </a>
               <a href="#coaching-class" onClick={closeMenu} className="mobile-nav-item mobile-nav-coaching">
