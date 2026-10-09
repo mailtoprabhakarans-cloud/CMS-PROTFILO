@@ -570,7 +570,7 @@ const localFaqData = [
 const WHATSAPP_PHONE = '919976963056';
 const WHATSAPP_BASE = `https://wa.me/${WHATSAPP_PHONE}`;
 const STUDIO_EMAIL = 'cmsfashiondesigner@gmail.com';
-const INSTAGRAM_URL = 'https://www.instagram.com/cms_fashion_designer?stkn=MTQyaGdtdTN5MHV1dQ%3D%3D';
+const INSTAGRAM_URL = 'https://www.instagram.com/cms_fashions_designer?utm_source=qr&cplk=MXNiYWFlNnIzcThsZw==';
 
 interface ServiceCardProps {
   service: ServiceItem;
@@ -1978,7 +1978,7 @@ export default function App() {
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
               >
                 <Instagram size={17} />
-                <span>See Real Works on Instagram (@cms_fashion_designer)</span>
+                <span>See Real Works on Instagram (@cms_fashions_designer)</span>
               </a>
             </div>
           </div>
@@ -2317,7 +2317,7 @@ export default function App() {
                           rel="noreferrer"
                           style={{ color: 'var(--gold-bright)', fontWeight: 600 }}
                         >
-                          @cms_fashion_designer
+                          @cms_fashions_designer
                         </a>
                       </p>
                     </div>
@@ -2458,7 +2458,7 @@ export default function App() {
                 className="footer-social-link"
                 style={{ color: 'var(--gold-light)' }}
               >
-                <Instagram size={18} /> @cms_fashion_designer
+                <Instagram size={18} /> @cms_fashions_designer
               </a>
               <a
                 href={`${WHATSAPP_BASE}?text=${encodeURIComponent('Hello CMS Fashions Designer!')}`}
