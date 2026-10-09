@@ -198,13 +198,13 @@ button {
 }
 
 .site-header .container-max {
-  max-width: 1440px;
-  padding: 0 1.25rem;
+  max-width: 1480px;
+  padding: 0 1rem;
 }
 
 @media (min-width: 768px) {
   .site-header .container-max {
-    padding: 0 1.75rem;
+    padding: 0 1.25rem;
   }
 }
 
@@ -214,12 +214,13 @@ button {
   justify-content: space-between;
   height: 66px;
   width: 100%;
-  gap: 1.25rem;
+  gap: 0.75rem;
 }
 
 @media (min-width: 1024px) {
   .nav-inner {
     height: 70px;
+    gap: 1rem;
   }
 }
 
@@ -296,7 +297,7 @@ button {
 .nav-menu {
   display: none;
   align-items: center;
-  gap: 1rem;
+  gap: 0.65rem;
 }
 
 @media (min-width: 1100px) {
@@ -305,30 +306,50 @@ button {
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 1280px) {
   .nav-menu {
-    gap: 1.35rem;
+    gap: 0.85rem;
   }
 }
 
 @media (min-width: 1400px) {
   .nav-menu {
-    gap: 1.65rem;
+    gap: 1.15rem;
+  }
+}
+
+.nav-link-hide-md {
+  display: none !important;
+}
+
+@media (min-width: 1360px) {
+  .nav-link-hide-md {
+    display: inline-flex !important;
+  }
+}
+
+.nav-dropdown-item-md-only {
+  display: flex;
+}
+
+@media (min-width: 1360px) {
+  .nav-dropdown-item-md-only {
+    display: none !important;
   }
 }
 
 .nav-link {
-  font-size: 0.86rem;
+  font-size: 0.83rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #d1d5db;
   position: relative;
-  padding: 6px 2px;
+  padding: 5px 2px;
   transition: color 0.25s ease;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .nav-link:hover {
@@ -357,11 +378,13 @@ button {
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.16) 0%, rgba(212, 175, 55, 0.06) 100%);
   border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: var(--radius-full);
-  padding: 5px 12px;
+  padding: 4px 9px;
+  font-size: 0.8rem;
   color: var(--gold-bright);
   font-weight: 600;
-  box-shadow: 0 0 14px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.15);
   transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .nav-link.nav-link-featured:after {
@@ -500,8 +523,9 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 /* Navbar CTA Button */
@@ -514,8 +538,9 @@ button {
 @media (min-width: 768px) {
   .nav-cta {
     display: inline-flex !important;
-    padding: 0.52rem 1.25rem;
-    font-size: 0.82rem;
+    padding: 0.48rem 1.05rem;
+    font-size: 0.81rem;
+    flex-shrink: 0;
   }
 }
 
@@ -541,7 +566,7 @@ button {
   transform: scale(1.04);
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1100px) {
   .mobile-toggle {
     display: none !important;
   }
@@ -4005,4 +4030,398 @@ button {
 .faq-answer strong {
   color: var(--gold-bright);
 }
+
+/* ==========================================================================
+   03.A / Haute Bridal Aari Work & Hand Embroidery (30 Master Stitches)
+   ========================================================================== */
+.aari-styles-section {
+  position: relative;
+  background: radial-gradient(circle at 50% 15%, rgba(212, 175, 55, 0.08) 0%, rgba(6, 10, 18, 0.96) 70%);
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.aari-controls-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .aari-controls-wrap {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.aari-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.aari-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 0.95rem;
+  border-radius: var(--radius-full);
+  background: rgba(15, 26, 44, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--text-sub);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.aari-tab-btn:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: var(--cream);
+}
+
+.aari-tab-btn.active {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+  color: var(--bg-obsidian);
+  font-weight: 700;
+  border-color: var(--gold-bright);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.28);
+}
+
+.aari-tab-btn .tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.aari-tab-btn.active .tab-count {
+  background: rgba(6, 10, 18, 0.25);
+  color: var(--bg-obsidian);
+}
+
+.aari-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  max-width: 440px;
+  width: 100%;
+}
+
+.aari-search-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--gold-primary);
+  pointer-events: none;
+}
+
+.aari-search-input {
+  width: 100%;
+  padding: 0.6rem 2.25rem 0.6rem 2.6rem;
+  background: rgba(14, 24, 42, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-full);
+  color: var(--text-main);
+  font-size: 0.86rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.aari-search-input:focus {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.22);
+  background: rgba(15, 26, 44, 0.95);
+}
+
+.aari-search-clear {
+  position: absolute;
+  right: 0.85rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: opacity 0.2s ease;
+}
+
+.aari-search-clear:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.aari-count-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  padding: 0.4rem 0.25rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.aari-count-bar strong {
+  color: var(--gold-light);
+}
+
+.aari-search-indicator {
+  font-size: 0.8rem;
+  color: var(--gold-light);
+}
+
+/* 30 Stitches Grid */
+.aari-styles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .aari-styles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.aari-style-card {
+  position: relative;
+  background: rgba(14, 24, 42, 0.76);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.3rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .aari-style-card {
+    padding: 1.6rem 1.4rem 1.4rem;
+  }
+}
+
+.aari-style-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+.aari-style-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-border-bright);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 20px rgba(212, 175, 55, 0.16);
+  background: rgba(20, 34, 58, 0.88);
+}
+
+.aari-style-card:hover::before {
+  opacity: 1;
+}
+
+.aari-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  gap: 0.5rem;
+}
+
+.aari-card-no {
+  font-family: var(--font-cinzel);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+}
+
+.aari-card-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.aari-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.aari-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 0.85rem;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  width: fit-content;
+}
+
+.aari-card-desc {
+  font-size: 0.87rem;
+  color: var(--text-sub);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.aari-card-ideal {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+.aari-card-ideal .ideal-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gold-bright);
+}
+
+.aari-card-ideal .ideal-text {
+  font-size: 0.78rem;
+  color: #d1d5db;
+  line-height: 1.35;
+}
+
+.aari-card-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  padding-top: 1rem;
+}
+
+.aari-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: var(--radius-sm);
+  color: var(--gold-bright);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.aari-card-btn:hover {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+  color: var(--bg-obsidian);
+  border-color: var(--gold-light);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Quality Assurance Ribbon */
+.aari-perks-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  background: rgba(15, 26, 44, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1rem;
+  backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .aari-perks-strip {
+    padding: 2rem 1.8rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .aari-perks-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.aari-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.aari-perk-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-bright);
+  flex-shrink: 0;
+}
+
+.aari-perk-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+
+.aari-perk-item p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
 

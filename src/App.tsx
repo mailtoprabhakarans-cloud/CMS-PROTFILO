@@ -408,6 +408,360 @@ export const sareeDrapingStyles: SareeDrapingStyle[] = [
   },
 ];
 
+export interface AariStitchItem {
+  no: string;
+  id: string;
+  name: string;
+  category: 'foundation' | 'loading' | 'jamiki' | 'beads' | 'couture';
+  categoryLabel: string;
+  badge: string;
+  tag: string;
+  description: string;
+  idealFor: string;
+}
+
+export const aariCategories = [
+  { id: 'all', label: 'All 30 Stitches', count: 30 },
+  { id: 'foundation', label: 'Chain & Line Work', count: 6 },
+  { id: 'loading', label: 'Embossed Loading', count: 9 },
+  { id: 'jamiki', label: 'Jamiki & Sequins', count: 4 },
+  { id: 'beads', label: 'Kundan & Beads', count: 8 },
+  { id: 'couture', label: 'Specialty & Cut Work', count: 3 },
+];
+
+export const aariStitchesData: AariStitchItem[] = [
+  {
+    no: '01',
+    id: 'chain-stitch',
+    name: 'Chain Stitch',
+    category: 'foundation',
+    categoryLabel: 'Chain & Line Work',
+    badge: 'Atelier Foundation',
+    tag: 'Essential Chain Line',
+    description: 'The elemental foundation of traditional Aari art, creating continuous, delicate loop lines that define motif outlines and neckline borders.',
+    idealFor: 'Motif contours, sleeve outlines & base border guides',
+  },
+  {
+    no: '02',
+    id: 'double-chain-stitch',
+    name: 'Double Chain Stitch',
+    category: 'foundation',
+    categoryLabel: 'Chain & Line Work',
+    badge: 'Dual Reinforcement',
+    tag: 'Prominent Bold Contour',
+    description: 'Two parallel chain trails sewn tightly together for a pronounced, bold contour that frames zari panels with enhanced prominence.',
+    idealFor: 'Bridal neckframes, grand yoke outlines & cuff borders',
+  },
+  {
+    no: '03',
+    id: 'zig-zag-stitch',
+    name: 'Zig Zag Stitch',
+    category: 'foundation',
+    categoryLabel: 'Chain & Line Work',
+    badge: 'Geometric Texture',
+    tag: 'Dynamic Alternating Flow',
+    description: 'Dynamic alternating stitch pattern delivering subtle texture, ideal for bridging gaps between solid fills and sheer fabric.',
+    idealFor: 'Sleeve border trims, chevron patterns & leaf veining',
+  },
+  {
+    no: '04',
+    id: 'chain-with-zig-zag-stitch',
+    name: 'Chain With Zig Zag Stitch',
+    category: 'foundation',
+    categoryLabel: 'Chain & Line Work',
+    badge: 'Dual-Layer Architecture',
+    tag: 'Braided Interlocking Trim',
+    description: 'Intricate pairing of a structural base chain with a weaving zig-zag overlay, creating an ornate, braided architectural border.',
+    idealFor: 'Grand bridal sleeve bands & neckline frames',
+  },
+  {
+    no: '05',
+    id: 'chain-filing-stitch',
+    name: 'Chain Filing Stitch',
+    category: 'foundation',
+    categoryLabel: 'Chain & Line Work',
+    badge: 'High-Density Fill',
+    tag: 'Silken Concentric Weave',
+    description: 'Concentric, high-density chain lines worked closely together to produce a smooth, rich embroidered surface with silk sheen.',
+    idealFor: 'Mango motifs, peacock bodies & petal fill',
+  },
+  {
+    no: '06',
+    id: 'water-filling-stitch',
+    name: 'Water Filling Stitch (Pani Work)',
+    category: 'foundation',
+    categoryLabel: 'Chain & Line Work',
+    badge: 'Signature Bridal Texture',
+    tag: 'Pani Work River Flow',
+    description: 'Continuous undulating meandering loops resembling flowing water, creating an exquisite luxury textured background around focal motifs.',
+    idealFor: 'Royal bridal blouse backgrounds & negative space filling',
+  },
+  {
+    no: '07',
+    id: 'straight-loading-stitch',
+    name: 'Straight Loading Stitch',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Embossed Linear Relief',
+    tag: 'Padded 3D Cord Ridge',
+    description: 'Thick silk thread worked perpendicularly over raised cotton cord padding, generating a bold, 3D embossed sculptural border.',
+    idealFor: 'Raised neckline borders, sleeve hem highlights & crest frames',
+  },
+  {
+    no: '08',
+    id: 'cross-loading-stitch',
+    name: 'Cross Loading Stitch',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Criss-Cross Dimension',
+    tag: 'Padded Geometric Ridge',
+    description: 'Padded relief stitch crossing thread diagonals over a raised core, yielding a rich geometric textured ridge with light-catching depth.',
+    idealFor: 'Heavy bridal borders & geometric sleeve bands',
+  },
+  {
+    no: '09',
+    id: 'sland-loading-stitch',
+    name: 'Sland Loading Stitch (Slant Loading)',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Chevron Sculpting',
+    tag: 'Slant Angle Lightplay',
+    description: 'Angled satin-like loading stitches over padded piping, creating directional light reflection and fluid embossed movement.',
+    idealFor: 'Curved neckline frames, floral stems & leaf contours',
+  },
+  {
+    no: '10',
+    id: 'button-hole-stitch',
+    name: 'Button Hole Stitch',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Scalloped Edging',
+    tag: 'Lockstitch Rim Finish',
+    description: 'Looped lockstitch producing crisp, durable knotted rims—perfect for ornamental scalloped edges, floral circles, and border trim.',
+    idealFor: 'Scallop necklines, flower petals & circular eyelets',
+  },
+  {
+    no: '11',
+    id: 'fish-bone-stitch',
+    name: 'Fish Bone Stitch',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Foliage Spine Weave',
+    tag: 'Central Rib Natural Foliage',
+    description: 'Criss-crossing diagonal stitches that meet along a central rib, realistically rendering natural leaf veins and feathered plumage.',
+    idealFor: 'Peacock feathers, vine leaves & botanical motifs',
+  },
+  {
+    no: '12',
+    id: 'double-fish-bone-stitch',
+    name: 'Double Fish Bone Stitch',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Opulent Royal Foliage',
+    tag: 'Dual Interlocking Weave',
+    description: 'Dual-layered interlocking diagonal stitches providing dense, heavy coverage and opulent depth for grander bridal motifs.',
+    idealFor: 'Large botanical leaves, royal crests & temple arches',
+  },
+  {
+    no: '13',
+    id: 'running-jamiki',
+    name: 'Running Jamiki',
+    category: 'jamiki',
+    categoryLabel: 'Jamiki & Sequins',
+    badge: 'Linear Sparkle Trail',
+    tag: 'Sequined Glistening Path',
+    description: 'Continuous trail of overlapping metallic sequins sewn precisely in sequence to catch venue lighting with glistening brilliance.',
+    idealFor: 'Shimmering necklines, flowing vines & contour sparkles',
+  },
+  {
+    no: '14',
+    id: 'jamiki-loading-stitch',
+    name: 'Jamiki Loading Stitch',
+    category: 'jamiki',
+    categoryLabel: 'Jamiki & Sequins',
+    badge: '3D Sequin Sculpting',
+    tag: 'Padded Metallic Crest',
+    description: 'High-density loading of sequins stitched over raised cord padding, combining 3D relief structure with dazzling metallic shimmer.',
+    idealFor: 'Heavy bridal sleeve cuffs & luxury center crests',
+  },
+  {
+    no: '15',
+    id: 'flat-jamiki-stitch',
+    name: 'Flat Jamiki Stitch',
+    category: 'jamiki',
+    categoryLabel: 'Jamiki & Sequins',
+    badge: 'Snag-Free Mirror Finish',
+    tag: 'Flush-Seated Sequins',
+    description: 'Individual sequins secured flat against the fabric with micro-anchors, delivering a smooth, mirror-like surface that will not snag.',
+    idealFor: 'Floral centers, scattered starlight & yoke panels',
+  },
+  {
+    no: '16',
+    id: 'bead-work',
+    name: 'Bead Work (Cut Dana & Moti)',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Micro Cut Dana & Moti',
+    tag: 'Jewellery Seed Bead Accent',
+    description: 'Hand-sewn micro glass beads, seed pearls, and cut dana creating delicate sparkling highlights and jewellery-like accents.',
+    idealFor: 'Floral centers, droplet fringes & intricate outlines',
+  },
+  {
+    no: '17',
+    id: 'running-bead-stitch',
+    name: 'Running Bead Stitch',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Continuous Fluid String',
+    tag: 'Aligned Glass Bead Trail',
+    description: 'Fluid continuous string of aligned beads securely locked with aari thread, ensuring smooth curvature along bridal necklines.',
+    idealFor: 'Neckline borders, arch outlines & teardrop frames',
+  },
+  {
+    no: '18',
+    id: 'flat-bead-stitch',
+    name: 'Flat Bead Stitch',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Flush Anchor Setting',
+    tag: 'Zero-Snag Pearl Lock',
+    description: 'Individual beads and pearls stitched flush with the fabric using locking loops, ensuring absolute durability and garment comfort.',
+    idealFor: 'Scattered polka-dot patterns & sleeve scatter',
+  },
+  {
+    no: '19',
+    id: 'running-tube',
+    name: 'Running Tube (Bugle Beads)',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Elongated Bugle Trail',
+    tag: 'Linear Glass Tube Detailing',
+    description: 'Slender cylindrical glass tubes stitched end-to-end for sharp geometric lines, rays, and modern architectural accents.',
+    idealFor: 'Sunburst patterns, border stripes & geometric sleeves',
+  },
+  {
+    no: '20',
+    id: 'tube-work-stitch',
+    name: 'Tube Work Stitch',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Radial Medallion Mesh',
+    tag: 'Geometric Bugle Cluster',
+    description: 'Cluster and radial layouts of metallic bugle tubes creating ornate flower petals, starburst medallions, and lattice textures.',
+    idealFor: 'Bridal back medallions & grand cuff highlights',
+  },
+  {
+    no: '21',
+    id: 'kundhan-work-stitch',
+    name: 'Kundhan Work Stitch',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Imperial Gem Setting',
+    tag: 'Gold-Framed Royal Kundan',
+    description: 'Gold-foiled authentic Kundan stones hand-stitched with matching zari and silk borders, recreating traditional heirloom jewellery on cloth.',
+    idealFor: 'Bridal neckpieces, deep-back centerpieces & regal brooches',
+  },
+  {
+    no: '22',
+    id: 'pineapple-stitch',
+    name: 'Pineapple Stitch',
+    category: 'couture',
+    categoryLabel: 'Specialty & Cut Work',
+    badge: 'Heritage Lattice Weave',
+    tag: 'Artisanal Scale Texture',
+    description: 'A distinctive multi-stitch textured pattern resembling pineapple skin scales, offering extraordinary artisanal depth and tactile richness.',
+    idealFor: 'Heritage wedding blouses, mango motifs & statement sleeves',
+  },
+  {
+    no: '23',
+    id: 'thread-loading',
+    name: 'Thread Loading',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Pure Silk 3D Volume',
+    tag: 'Untwisted Silk Floss Relief',
+    description: 'Voluminous layering of untwisted pure silk floss thread over base cords, achieving a luxurious, velvety embossed sheen.',
+    idealFor: 'Embossed floral petals, temple pillars & lettering',
+  },
+  {
+    no: '24',
+    id: 'ton-fish-bone-stitch',
+    name: 'Ton Fish Bone Stitch',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Tonal Gradient Shading',
+    tag: 'Ombre Threaded Petal',
+    description: 'Fishbone weave executed with tone-on-tone shaded threads for subtle gradient light transitions across leaf and petal veins.',
+    idealFor: 'Ombre bridal motifs & botanical floral sleeves',
+  },
+  {
+    no: '25',
+    id: 'ton-double-fish-bone-stitch',
+    name: 'Ton Double Fish Bone Stitch',
+    category: 'loading',
+    categoryLabel: 'Embossed Loading',
+    badge: 'Masterclass Dual-Tone',
+    tag: 'Heavy Royal Shaded Foliage',
+    description: 'Heavy dual-tone fishbone technique blending two harmonious thread shades across thick relief foliage for a masterclass couture finish.',
+    idealFor: 'Heavy grand bridal yokes & royal peacock tailfeathers',
+  },
+  {
+    no: '26',
+    id: 'french-knot-with-jamiki-stitch',
+    name: 'French Knot With Jamiki Stitch',
+    category: 'jamiki',
+    categoryLabel: 'Jamiki & Sequins',
+    badge: 'Dimensional Jewel Florets',
+    tag: 'Thread-Crowned Sequin Knot',
+    description: 'Textured raised thread knots crowned at the center of glistening sequins, creating dimensional florets that dance in the light.',
+    idealFor: 'Floral stamen centers, scattered stars & grand yoke fills',
+  },
+  {
+    no: '27',
+    id: 'cut-work-stitch',
+    name: 'Cut Work Stitch',
+    category: 'couture',
+    categoryLabel: 'Specialty & Cut Work',
+    badge: 'Haute Cutout Lattice',
+    tag: 'Peek-a-Boo Sheer Openwork',
+    description: 'Precision reinforced buttonhole embroidery bordering sheer openwork windows, sculpting breathtaking peek-a-boo lace cutouts.',
+    idealFor: 'Back neck cuts, scalloped hems & sheer sleeve windows',
+  },
+  {
+    no: '28',
+    id: 'jadai-pinnal-stitch',
+    name: 'Jadai Pinnal Stitch',
+    category: 'couture',
+    categoryLabel: 'Specialty & Cut Work',
+    badge: 'South Indian Bridal Plait',
+    tag: 'Ceremonial Braid Heritage',
+    description: 'Heritage South Indian plaited braid stitch mimicking ceremonial bridal hair braids (jadai), rich in cultural symbolism and texture.',
+    idealFor: 'Traditional muhurtham blouses, bridal border braids & cuffs',
+  },
+  {
+    no: '29',
+    id: 'stone-lays-stitch',
+    name: 'Stone Lays Stitch',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Continuous Crystal Lace',
+    tag: 'Brass-Cup Rhinestone Border',
+    description: 'Continuous brass-cup chain crystal stones stitched securely along garment contours for uninterrupted bridal radiance.',
+    idealFor: 'Sweetheart neck outlines, sleeve hem trims & back borders',
+  },
+  {
+    no: '30',
+    id: 'ring-work',
+    name: 'Ring Work',
+    category: 'beads',
+    categoryLabel: 'Kundan & Beads',
+    badge: 'Metallic Ring Dimension',
+    tag: 'Silk-Wrapped Imperial Ring',
+    description: 'Circular metallic rings wrapped in silk floss or crowned with cut stones, creating dimensional eyelets and imperial medallions.',
+    idealFor: 'Button loops, back tie-back tassel bases & sleeve medallions',
+  },
+];
+
 interface BlouseStyle {
   id: string;
   name: string;
@@ -851,6 +1205,34 @@ export default function App() {
     return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
   };
 
+  // Aari Work & Hand Embroidery Stitches Filter & Search
+  const [aariFilter, setAariFilter] = useState<string>('all');
+  const [aariSearch, setAariSearch] = useState<string>('');
+  const [showAllAari, setShowAllAari] = useState<boolean>(false);
+
+  const filteredAariStitches = aariStitchesData.filter((stitch) => {
+    const matchesCategory = aariFilter === 'all' || stitch.category === aariFilter;
+    const query = aariSearch.trim().toLowerCase();
+    const matchesSearch = !query ||
+      stitch.name.toLowerCase().includes(query) ||
+      stitch.tag.toLowerCase().includes(query) ||
+      stitch.badge.toLowerCase().includes(query) ||
+      stitch.categoryLabel.toLowerCase().includes(query) ||
+      stitch.description.toLowerCase().includes(query) ||
+      stitch.idealFor.toLowerCase().includes(query) ||
+      stitch.no.includes(query);
+    return matchesCategory && matchesSearch;
+  });
+
+  const displayedAariStitches = showAllAari
+    ? filteredAariStitches
+    : filteredAariStitches.slice(0, 6);
+
+  const createAariStitchWhatsAppLink = (stitchName: string, stitchNo: string) => {
+    const text = `Hello CMS Fashions Designer, I would like to inquire about incorporating the #${stitchNo} "${stitchName}" aari work stitch on my bridal blouse. Could you please share design options and pricing?`;
+    return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+  };
+
   return (
     <div className="site-shell">
       {/* Top Announcement Ribbon */}
@@ -900,17 +1282,16 @@ export default function App() {
             </a>
 
             <nav className="nav-menu" aria-label="Main Navigation">
-              <a href="#studio" className="nav-link">The Studio</a>
+              <a href="#studio" className="nav-link nav-link-hide-md">The Studio</a>
               <a href="#blouses" className="nav-link">Blouses</a>
               <a href="#services" className="nav-link">Services</a>
               <a
-                href="#services"
-                onClick={() => setActiveCategory('aari')}
+                href="#aari-work"
                 className="nav-link nav-link-featured"
               >
                 <Sparkles size={12} className="nav-link-sparkle" />
                 <span>Aari Work &amp; Embroidery</span>
-                <span className="nav-link-badge">Bridal</span>
+                <span className="nav-link-badge">30 Stitches</span>
               </a>
               <a href="#saree-styles" className="nav-link nav-link-featured">
                 <Sparkles size={12} className="nav-link-sparkle" />
@@ -918,7 +1299,7 @@ export default function App() {
                 <span className="nav-link-badge">Classes</span>
               </a>
               <a href="#portfolio" className="nav-link">Lookbook</a>
-              <a href="#local-spotlight" className="nav-link">Near Hopes</a>
+              <a href="#local-spotlight" className="nav-link nav-link-hide-md">Near Hopes</a>
 
               {/* Luxury Secondary Dropdown */}
               <div
@@ -938,6 +1319,28 @@ export default function App() {
 
                 {moreDropdownOpen && (
                   <div className="nav-dropdown-menu">
+                    <a
+                      href="#studio"
+                      onClick={() => setMoreDropdownOpen(false)}
+                      className="nav-dropdown-item nav-dropdown-item-md-only"
+                    >
+                      <Sparkles size={15} />
+                      <div>
+                        <strong>The Atelier Studio</strong>
+                        <span>Our craftsmanship &amp; heritage</span>
+                      </div>
+                    </a>
+                    <a
+                      href="#local-spotlight"
+                      onClick={() => setMoreDropdownOpen(false)}
+                      className="nav-dropdown-item nav-dropdown-item-md-only"
+                    >
+                      <MapPin size={15} />
+                      <div>
+                        <strong>Near Hopes College</strong>
+                        <span>Masakalipalayam Rd studio</span>
+                      </div>
+                    </a>
                     <a
                       href="#coaching-class"
                       onClick={() => setMoreDropdownOpen(false)}
@@ -1038,15 +1441,12 @@ export default function App() {
                 <span>All Tailoring Services</span>
               </a>
               <a
-                href="#services"
-                onClick={() => {
-                  setActiveCategory('aari');
-                  closeMenu();
-                }}
+                href="#aari-work"
+                onClick={closeMenu}
                 className="mobile-nav-item"
               >
                 <span className="mobile-nav-num">04</span>
-                <span>Aari Work &amp; Embroidery (Bridal Handwork)</span>
+                <span>Aari Work &amp; Embroidery (30 Master Stitches)</span>
               </a>
               <a href="#saree-styles" onClick={closeMenu} className="mobile-nav-item">
                 <span className="mobile-nav-num">05</span>
@@ -1575,6 +1975,168 @@ export default function App() {
                       />
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Master Aari Work & Hand Embroidery Stitches Showcase Section */}
+        <section id="aari-work" className="aari-styles-section section-pad">
+          <div className="container-max">
+            <div className="section-header-center">
+              <div className="section-eyebrow">
+                <span /> 03.A / Haute Bridal Embroidery Studio <span />
+              </div>
+              <h2 className="section-title">
+                30+ Master Aari Work &amp; <br />
+                <em>Hand Embroidery Stitches.</em>
+              </h2>
+              <p className="section-desc">
+                From heritage Chain and Water filling to royal Kundan gems, 3D thread loading, Jamiki sparkles, and ceremonial Jadai Pinnal—explore Coimbatore's definitive 30-stitch hand embroidery repertoire, crafted stitch-by-stitch on traditional wooden adda frames.
+              </p>
+            </div>
+
+            {/* Controls: Category Filter Tabs & Live Search */}
+            <div className="aari-controls-wrap">
+              <div className="aari-filter-tabs" role="tablist" aria-label="Aari Stitch Categories">
+                {aariCategories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    className={`aari-tab-btn ${aariFilter === cat.id ? 'active' : ''}`}
+                    onClick={() => setAariFilter(cat.id)}
+                  >
+                    <span>{cat.label}</span>
+                    <span className="tab-count">{cat.count}</span>
+                  </button>
+                ))}
+              </div>
+
+              <div className="aari-search-box">
+                <Search size={16} className="aari-search-icon" />
+                <input
+                  type="text"
+                  className="aari-search-input"
+                  placeholder="Search 30 aari stitches (e.g. Kundan, Jamiki, Loading, Cut work, Jadai)..."
+                  value={aariSearch}
+                  onChange={(e) => setAariSearch(e.target.value)}
+                />
+                {aariSearch && (
+                  <button
+                    type="button"
+                    className="aari-search-clear"
+                    onClick={() => setAariSearch('')}
+                    aria-label="Clear Search"
+                  >
+                    <X size={14} />
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Results Count Bar */}
+            <div className="aari-count-bar">
+              <span>
+                Showing <strong>{displayedAariStitches.length}</strong> of {filteredAariStitches.length} Master Embroidery Stitches
+              </span>
+              {aariSearch && (
+                <span className="aari-search-indicator">
+                  Filtered by: <em>"{aariSearch}"</em>
+                </span>
+              )}
+            </div>
+
+            {/* 30 Aari Stitches Grid */}
+            <div className="aari-styles-grid">
+              {displayedAariStitches.map((item) => (
+                <div className="aari-style-card" key={item.id}>
+                  <div className="aari-card-top">
+                    <span className="aari-card-no">#{item.no}</span>
+                    <span className="aari-card-badge">{item.badge}</span>
+                  </div>
+
+                  <h3 className="aari-card-title">{item.name}</h3>
+
+                  <div className="aari-card-tag">
+                    <Sparkles size={12} />
+                    <span>{item.tag}</span>
+                  </div>
+
+                  <p className="aari-card-desc">{item.description}</p>
+
+                  <div className="aari-card-ideal">
+                    <span className="ideal-label">Best Placed:</span>
+                    <span className="ideal-text">{item.idealFor}</span>
+                  </div>
+
+                  <div className="aari-card-footer">
+                    <a
+                      href={createAariStitchWhatsAppLink(item.name, item.no)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="aari-card-btn"
+                    >
+                      <MessageCircle size={14} />
+                      <span>Inquire #{item.no} on WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Show More / Show Less Button for Aari Stitches */}
+            {filteredAariStitches.length > 6 && (
+              <div className="show-more-wrap">
+                <button
+                  type="button"
+                  className="btn show-more-btn"
+                  onClick={() => setShowAllAari(!showAllAari)}
+                >
+                  {showAllAari ? (
+                    <>
+                      <span>Show Less Stitches</span>
+                      <ChevronUp size={16} />
+                    </>
+                  ) : (
+                    <>
+                      <span>Show All 30 Stitches (+{filteredAariStitches.length - 6} More)</span>
+                      <ChevronDown size={16} />
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
+
+            {/* Aari Quality Assurance Ribbon */}
+            <div className="aari-perks-strip">
+              <div className="aari-perk-item">
+                <div className="aari-perk-icon-wrap">
+                  <Crown size={22} />
+                </div>
+                <div>
+                  <h4>100% Adda Hand Embroidery</h4>
+                  <p>Stitched loop-by-loop on authentic wooden embroidery cots by master karigars for tight, non-unraveling craftsmanship.</p>
+                </div>
+              </div>
+
+              <div className="aari-perk-item">
+                <div className="aari-perk-icon-wrap">
+                  <ShieldCheck size={22} />
+                </div>
+                <div>
+                  <h4>Pure Zari &amp; Anti-Tarnish Gems</h4>
+                  <p>Genuine metallic zari threads, gold-plated cut-dana, and lead-free kundan stones tested against tarnishing and color bleed.</p>
+                </div>
+              </div>
+
+              <div className="aari-perk-item">
+                <div className="aari-perk-icon-wrap">
+                  <Sparkles size={22} />
+                </div>
+                <div>
+                  <h4>Harmonized to Saree Motifs</h4>
+                  <p>Custom tracing and neckline drafting tailored to harmonize seamlessly with the zari border of your heirloom wedding saree.</p>
                 </div>
               </div>
             </div>
