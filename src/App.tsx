@@ -2837,12 +2837,12 @@ export default function App() {
 
                   <div className="contact-info-entry coaching-contact-entry">
                     <div className="contact-info-icon">
-                      <GraduationCap size={22} />
+                      <Sparkles size={22} />
                     </div>
                     <div className="contact-info-text">
-                      <h5>Saree Draping Coaching Class</h5>
+                      <h5>Saree Pre-Pleating &amp; Draping Styles</h5>
                       <p>
-                        Coaching class admissions &amp; batch schedule inquiry:
+                        Pre-pleating, box folding &amp; draping inquiry:
                       </p>
                       <p style={{ marginTop: '3px' }}>
                         <a href="tel:+919976963056" style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
