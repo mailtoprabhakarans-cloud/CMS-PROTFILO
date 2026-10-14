@@ -2840,9 +2840,9 @@ export default function App() {
                       <Sparkles size={22} />
                     </div>
                     <div className="contact-info-text">
-                      <h5>Saree Pre-Pleating &amp; Draping Styles</h5>
+                      <h5>Saree Pre-Pleating &amp; Draping Styles Coaching Class</h5>
                       <p>
-                        Pre-pleating, box folding &amp; draping inquiry:
+                        Pre-pleating, box folding &amp; Hanger Folding , Draping inquiry:
                       </p>
                       <p style={{ marginTop: '3px' }}>
                         <a href="tel:+919976963056" style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
