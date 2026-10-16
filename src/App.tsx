@@ -2846,7 +2846,7 @@ export default function App() {
                       </p>
                       <p style={{ marginTop: '3px' }}>
                         <a href="tel:+919976963056" style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
-                          Call / WhatsApp: +91 99769 63056
+                          Call / WhatsApp: +91 99769 63056 , +91 85240 09735
                         </a>
                       </p>
                     </div>
